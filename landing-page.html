@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-581858969"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-581858969');
+    </script>
+    <!-- Event snippet for Enviar formulário de lead conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-581858969/sDmnCLO1qvQbEJntuZUC',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synexus Soluções Empresariais | Contabilidade Estratégica</title>
+    <meta name="description"
+        content="Transformamos números em estratégia. Soluções contábeis completas para impulsionar o crescimento da sua empresa.">
+    <meta name="keywords" content="contabilidade, consultoria empresarial, planejamento tributário, BPO financeiro">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-amber: #f59e0b;
+            --primary-amber-dark: #d97706;
+            --primary-amber-darker: #b45309;
+            --bg-dark: #0f172a;
+            --bg-dark-secondary: #1e293b;
+            --bg-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-gray: #475569;
+            --text-light: #94a3b8;
+            --white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-amber: 0 4px 14px rgba(245, 158, 11, 0.35);
+            --radius-sm: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 50%, #422006 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 80px;
+            max-height: 80px;
+            width: auto;
+            max-width: 280px;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .logo img:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                height: 60px;
+                max-height: 60px;
+                max-width: 200px;
+            }
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-amber), var(--primary-amber-dark));
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-amber);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.cta {
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            color: var(--white);
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-amber);
+            font-weight: 600;
+        }
+
+        .nav-link.cta::after {
+            display: none;
+        }
+
+        .nav-link.cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+            color: var(--white);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .nav-mobile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 100%);
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-mobile.active {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-mobile .nav-link {
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            text-align: left;
+        }
+
+        .nav-mobile .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 50%, #422006 100%);
+            padding: 8rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(245, 158, 11, 0.15), transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            color: var(--primary-amber);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            max-width: 90%;
+        }
+
+        .hero-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+
+        .check-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        /* Contact Form Card */
+        .form-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-card .form-subtitle {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-md);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary-amber);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+        }
+
+        /* Select options styling for better legibility */
+        .form-group select option {
+            background: #1a1a2e;
+            color: #ffffff;
+            padding: 0.75rem;
+        }
+
+        .form-group select option:hover,
+        .form-group select option:focus,
+        .form-group select option:checked {
+            background: #f59e0b;
+            color: #1a1a2e;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            color: var(--white);
+            box-shadow: var(--shadow-amber);
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-description {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-checklist {
+                align-items: center;
+            }
+
+            .form-card {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-amber), var(--primary-amber-dark));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-amber);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Services Category Titles */
+        .services-category {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .category-title {
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .category-highlight {
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Services Grid 3 columns */
+        .services-grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Numbered Service Cards */
+        .service-card-numbered {
+            position: relative;
+            padding-top: 4rem;
+        }
+
+        .service-number {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--white);
+            box-shadow: var(--shadow-amber);
+        }
+
+        /* Services Slider */
+        .services-slider-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .services-slider {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 1rem 0.5rem;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            flex: 1;
+        }
+
+        .services-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .services-slider .service-card {
+            min-width: 320px;
+            max-width: 380px;
+            flex-shrink: 0;
+        }
+
+        .slider-btn-services {
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-slider .service-card {
+                min-width: 280px;
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .services-slider .service-card {
+                min-width: 260px;
+                max-width: 300px;
+            }
+
+            .services-slider-wrapper {
+                gap: 0.5rem;
+            }
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .about-text h2 .highlight {
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-text p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .stats-box {
+            background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark-secondary));
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1), transparent 60%);
+            pointer-events: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fbbf24, var(--primary-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-box {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Differentials Section */
+        .differentials {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 50%, #422006 100%);
+            position: relative;
+        }
+
+        .differentials .section-title,
+        .differentials .section-subtitle {
+            color: var(--white);
+        }
+
+        .differentials .section-subtitle {
+            color: var(--text-light);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .diff-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+        }
+
+        .diff-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .diff-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-amber);
+        }
+
+        .diff-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+
+        .diff-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 1024px) {
+            .diff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .diff-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Clients Section */
+        .clients {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .clients-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .clients-slider {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 1rem 0;
+        }
+
+        .clients-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .client-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 220px;
+            flex-shrink: 0;
+        }
+
+        .client-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-amber);
+        }
+
+        .client-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-amber);
+            font-weight: 800;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .client-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .client-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .client-card p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        .slider-btn {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            border: none;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-amber);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .slider-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+        }
+
+        .slider-btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 640px) {
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .client-card {
+                min-width: 200px;
+                padding: 1.5rem;
+            }
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: var(--bg-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form-wrapper {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-wrapper .form-subtitle {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form-wrapper .form-group label {
+            color: var(--text-dark);
+        }
+
+        .contact-form-wrapper .form-group input,
+        .contact-form-wrapper .form-group textarea {
+            background: var(--bg-light);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            color: var(--text-dark);
+        }
+
+        .contact-form-wrapper .form-group input::placeholder,
+        .contact-form-wrapper .form-group textarea::placeholder {
+            color: var(--text-light);
+        }
+
+        .contact-form-wrapper .form-group input:focus,
+        .contact-form-wrapper .form-group textarea:focus {
+            border-color: var(--primary-amber);
+            background: var(--white);
+        }
+
+        .contact-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .info-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            min-width: 2.5rem;
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+
+        .info-content h4 {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .info-content p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .hours-card {
+            background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark-secondary));
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .hours-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .hours-item:last-child {
+            border-bottom: none;
+        }
+
+        .hours-time {
+            font-weight: 600;
+            color: var(--primary-amber);
+        }
+
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-dark);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand img {
+            height: 260px;
+            max-height: 260px;
+            width: auto;
+            max-width: 260px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-brand img {
+                height: 56px;
+                max-height: 56px;
+                max-width: 200px;
+            }
+        }
+
+        .footer-brand p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            max-width: 300px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .social-link:hover {
+            background: var(--primary-amber);
+            transform: translateY(-2px);
+        }
+
+        .footer-column h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--primary-amber);
+            padding-left: 0.25rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                max-width: 100%;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            margin-top: 1rem;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Contact Info Alignment */
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .info-icon {
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
+            border-radius: var(--radius-md);
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            text-align: left;
+        }
+
+        .info-content h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .info-content p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="https://yuaxrzcuqtuhxxvwmiuw.supabase.co/storage/v1/object/public/temp/synexus_logo.png"
+                    alt="Synexus Soluções Empresariais">
+            </a>
+
+            <nav class="nav-desktop">
+                <button class="nav-link" onclick="scrollToSection('hero')">Início</button>
+                <button class="nav-link" onclick="scrollToSection('services')">Serviços</button>
+                <button class="nav-link" onclick="scrollToSection('about')">Sobre</button>
+                <button class="nav-link" onclick="scrollToSection('clients')">Clientes</button>
+                <button class="nav-link cta" onclick="scrollToSection('heroName')">Fale Conosco</button>
+            </nav>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+        </div>
+
+        <nav class="nav-mobile" id="navMobile">
+            <button class="nav-link" onclick="scrollToSection('hero')">Início</button>
+            <button class="nav-link" onclick="scrollToSection('services')">Serviços</button>
+            <button class="nav-link" onclick="scrollToSection('about')">Sobre</button>
+            <button class="nav-link" onclick="scrollToSection('clients')">Clientes</button>
+            <button class="nav-link cta" onclick="scrollToSection('heroName')">Fale Conosco</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Form -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        ⭐ Contabilidade Estratégica
+                    </div>
+                    <h1 class="hero-title">
+                        Transforme Números em <span class="highlight">Estratégia</span> para seu Negócio
+                    </h1>
+                    <p class="hero-description">
+                        Somos mais que contadores. Somos parceiros estratégicos que ajudam sua empresa
+                        a crescer de forma sustentável e inteligente.
+                    </p>
+                    <div class="hero-checklist">
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Contabilidade consultiva e estratégica</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Planejamento tributário otimizado</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Atendimento personalizado e humanizado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3>Solicite uma Consultoria</h3>
+                    <p class="form-subtitle">Preencha o formulário e entraremos em contato em até 24h</p>
+                    <form id="heroForm" onsubmit="handleFormSubmit(event, 'heroForm')">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="heroName">Nome</label>
+                                <input type="text" id="heroName" name="name" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="heroPhone">Telefone para contato</label>
+                                <input type="tel" id="heroPhone" name="phone" placeholder="(00) 00000-0000" required>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="heroEmail">E-mail *</label>
+                            <input type="email" id="heroEmail" name="email" placeholder="seu@email.com" required>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="heroService">Qual serviço está buscando?</label>
+                            <select id="heroService" name="service">
+                                <option value="Assessoria Contábil">Assessoria Contábil</option>
+                                <option value="Assessoria Tributária">Assessoria Tributária</option>
+                                <option value="Assessoria Trabalhista">Assessoria Trabalhista</option>
+                                <option value="Gestão Societária">Gestão Societária</option>
+                                <option value="Imposto de Renda Pessoa Física">Imposto de Renda Pessoa Física</option>
+                                <option value="Terceirização e Gestão Financeira Compartilhada">Terceirização e Gestão
+                                    Financeira Compartilhada</option>
+                                <option value="Recuperação de Tributos">Recuperação de Tributos</option>
+                                <option value="Assessoria Jurídica e Empresarial">Assessoria Jurídica e Empresarial
+                                </option>
+                                <option value="Consultor de Negócios">Consultor de Negócios</option>
+                                <option value="Auditória">Auditória</option>
+                                <option value="Outros Serviços">Outros Serviços</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Quero uma Consultoria →
+                        </button>
+                        <div class="success-message" id="heroSuccess">
+                            ✓ Mensagem enviada com sucesso! Entraremos em contato em breve.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">
+                    Soluções completas e personalizadas para atender todas as necessidades contábeis, fiscais e
+                    jurídicas da sua empresa
+                </p>
+            </div>
+
+            <!-- Assessoria Contábil -->
+            <div class="services-category animate-on-scroll">
+                <h3 class="category-title"><span class="category-highlight">Nossos serviços de
+                        assessoria</span><br>contábil</h3>
+            </div>
+
+            <div class="services-slider-wrapper">
+                <button class="slider-btn slider-btn-services" onclick="slideServices('contabil', -1)"
+                    aria-label="Anterior">←</button>
+
+                <div class="services-slider" id="servicesSliderContabil">
+                    <div class="service-card service-card-numbered">
+                        <div class="service-number">1</div>
+                        <h3>Gestão contábil</h3>
+                        <p>Oferecemos suporte completo em gestão contábil, realizando relatórios com foco gerencial,
+                            escrituração contábil, apuração de balancetes, elaboração do balanço anual e DRE e imposto
+                            de renda.</p>
+                    </div>
+
+                    <div class="service-card service-card-numbered">
+                        <div class="service-number">2</div>
+                        <h3>Planejamento tributário</h3>
+                        <p>Ajudamos a minimizar os seus impostos e a garantir que você esteja em conformidade com a
+                            legislação tributária em constante mudança.</p>
+                    </div>
+
+                    <div class="service-card service-card-numbered">
+                        <div class="service-number">3</div>
+                        <h3>Suporte trabalhista</h3>
+                        <p>Garantimos que os seus processos de RH estejam em conformidade com a legislação trabalhista e
+                            que seus funcionários tenham todos os benefícios que lhes são garantidos.</p>
+                    </div>
+                </div>
+
+                <button class="slider-btn slider-btn-services" onclick="slideServices('contabil', 1)"
+                    aria-label="Próximo">→</button>
+            </div>
+
+            <!-- Assessoria Jurídica -->
+            <div class="services-category animate-on-scroll" style="margin-top: 4rem;">
+                <h3 class="category-title"><span class="category-highlight">Nossos serviços de
+                        assessoria</span><br>jurídica</h3>
+            </div>
+
+            <div class="services-slider-wrapper">
+                <button class="slider-btn slider-btn-services" onclick="slideServices('juridica', -1)"
+                    aria-label="Anterior">←</button>
+
+                <div class="services-slider" id="servicesSliderJuridica">
+                    <div class="service-card">
+                        <div class="service-icon">📝</div>
+                        <h3>Direito Contratual</h3>
+                        <p>Contratos bem redigidos são o alicerce para relações comerciais sólidas. Nossa assessoria
+                            garante que a sua empresa estará protegida e amparada em seus acordos.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🏆</div>
+                        <h3>Propriedade Intelectual</h3>
+                        <p>A atenção à propriedade intelectual é um passo crucial para proteger a identidade e reputação
+                            de sua empresa, garantindo exclusividade sobre o nome, logotipo e símbolos, fortalecendo sua
+                            posição no mercado e evitando potenciais conflitos e prejuízos.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Contencioso</h3>
+                        <p>Caso você enfrente um litígio, nossa experiente equipe de advogados estará pronta para
+                            defender os seus interesses.</p>
+                    </div>
+                </div>
+
+                <button class="slider-btn slider-btn-services" onclick="slideServices('juridica', 1)"
+                    aria-label="Próximo">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <h2>Sobre a <span class="highlight">Synexus</span></h2>
+                    <p>
+                        A Synexus Soluções Empresariais nasceu com o propósito de transformar a forma como
+                        empresas enxergam e utilizam a contabilidade. Acreditamos que a contabilidade vai
+                        muito além de números e obrigações fiscais.
+                    </p>
+                    <p>
+                        Somos parceiros estratégicos do seu negócio, oferecendo soluções inteligentes e
+                        personalizadas que impulsionam o crescimento sustentável da sua empresa.
+                    </p>
+
+                    <!-- <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-content">
+                                <h3>Nossa Missão</h3>
+                                <p>Fornecer soluções contábeis estratégicas que transformem dados em insights valiosos.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">💡</div>
+                            <div class="feature-content">
+                                <h3>Nossa Visão</h3>
+                                <p>Ser referência em consultoria empresarial, reconhecida pela excelência no
+                                    atendimento.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">🏆</div>
+                            <div class="feature-content">
+                                <h3>Nossos Valores</h3>
+                                <p>Ética, transparência, inovação e compromisso com o sucesso dos nossos clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                    <!-- <div class="stats-box animate-on-scroll">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Clientes Atendidos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfação</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24h</div>
+                            <div class="stat-label">Tempo de Resposta</div>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+    </section>
+
+    <!-- Differentials Section -->
+    <section class="differentials" id="differentials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por que escolher a Synexus?</h2>
+                <p class="section-subtitle">Diferenciais que fazem toda a diferença para o sucesso do seu negócio</p>
+            </div>
+
+            <div class="diff-grid">
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-icon">⚡</div>
+                    <h3>Agilidade</h3>
+                    <p>Processos otimizados e tecnologia de ponta para entregas rápidas e eficientes.</p>
+                </div>
+
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-icon">🎧</div>
+                    <h3>Atendimento Personalizado</h3>
+                    <p>Cada cliente tem necessidades únicas. Oferecemos soluções sob medida para o seu negócio.</p>
+                </div>
+
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-icon">🔒</div>
+                    <h3>Segurança Total</h3>
+                    <p>Seus dados protegidos com os mais altos padrões de segurança e confidencialidade.</p>
+                </div>
+
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-icon">🖥️</div>
+                    <h3>Tecnologia Avançada</h3>
+                    <p>Ferramentas modernas e automatizadas para maior precisão e controle em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Clientes</h2>
+                <p class="section-subtitle">Empresas que confiam em nossa expertise para crescer com segurança</p>
+            </div>
+
+            <div class="clients-wrapper">
+                <button class="slider-btn" onclick="slideClients(-1)" aria-label="Anterior">←</button>
+
+                <div class="clients-slider" id="clientsSlider">
+                    <!-- Indústria -->
+                    <div class="client-card" data-order="">
+                        <div class="client-logo">
+                            <!-- <img src="URL_DA_IMAGEM" alt="Studio Vêneto"> -->
+                            SV
+                        </div>
+                        <h4>Studio Vêneto</h4>
+                        <p>Indústria</p>
+                    </div>
+
+                    <div class="client-card" data-order="3">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/dauper.jpg" alt="Dauper">
+                        </div>
+                        <h4>Dauper</h4>
+                        <p>Indústria</p>
+                    </div>
+
+                    <!-- Comércio -->
+                    <div class="client-card" data-order="1">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/cristais-de-gramado.jpg"
+                                alt="Cristais de Gramado">
+                        </div>
+                        <h4>Cristais de Gramado</h4>
+                        <p>Comércio</p>
+                    </div>
+
+                    <div class="client-card" data-order="7">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/nicolly-almeida-store.jpg"
+                                alt="Nicolly Almeida Store">
+                        </div>
+                        <h4>Nicolly Almeida Store</h4>
+                        <p>Comércio</p>
+                    </div>
+
+                    <div class="client-card" data-order="">
+                        <div class="client-logo">
+                            <!-- <img src="URL_DA_IMAGEM" alt="Fruteira Helena"> -->
+                            FH
+                        </div>
+                        <h4>Fruteira Helena</h4>
+                        <p>Comércio</p>
+                    </div>
+
+                    <div class="client-card" data-order="4">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/farmacia-bem-estar.png"
+                                alt="Farmácia Bem Estar">
+                        </div>
+                        <h4>Farmácia Bem Estar</h4>
+                        <p>Comércio</p>
+                    </div>
+
+                    <!-- Serviço -->
+                    <div class="client-card" data-order="8">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/gv-sports.jpg" alt="G.V. Sports Academia">
+                        </div>
+                        <h4>G.V. Sports Academia</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="9">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/loca-mais.jpg" alt="Locadora Locamais">
+                        </div>
+                        <h4>Locadora Locamais</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="5">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/paranhana-automecanica.jpg"
+                                alt="Paranhana Automecanica">
+                        </div>
+                        <h4>Paranhana Automecanica</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="6">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/sana-cure.jpg"
+                                alt="Saná Cure Estética e Tratamentos">
+                        </div>
+                        <h4>Saná Cure Estética e Tratamentos</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="">
+                        <div class="client-logo">
+                            <!-- <img src="URL_DA_IMAGEM" alt="Marlon Santos Representações"> -->
+                            MS
+                        </div>
+                        <h4>Marlon Santos Representações</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="">
+                        <div class="client-logo">
+                            <!-- <img src="URL_DA_IMAGEM" alt="GPS Construções"> -->
+                            GP
+                        </div>
+                        <h4>GPS Construções</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="">
+                        <div class="client-logo">
+                            <!-- <img src="URL_DA_IMAGEM" alt="Facilita Log"> -->
+                            FL
+                        </div>
+                        <h4>Facilita Log</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="">
+                        <div class="client-logo">
+                            <!-- <img src="URL_DA_IMAGEM" alt="Construtora Abel Wolf"> -->
+                            AW
+                        </div>
+                        <h4>Construtora Abel Wolf</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="10">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/aguia-branca-turismo.jpg"
+                                alt="Águia Branca Turismo">
+                        </div>
+                        <h4>Águia Branca Turismo</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <div class="client-card" data-order="11">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/aguia-tour.jpg" alt="Águia Tour">
+                        </div>
+                        <h4>Águia Tour</h4>
+                        <p>Serviço</p>
+                    </div>
+
+                    <!-- Holding -->
+                    <div class="client-card" data-order="">
+                        <div class="client-logo">
+                            <!-- <img src="URL_DA_IMAGEM" alt="CDG Participações"> -->
+                            CD
+                        </div>
+                        <h4>CDG Participações</h4>
+                        <p>Holding</p>
+                    </div>
+
+                    <!-- Parques -->
+                    <div class="client-card" data-order="">
+                        <div class="client-logo">
+                            <!-- <img src="URL_DA_IMAGEM" alt="Parque das Águas"> -->
+                            PA
+                        </div>
+                        <h4>Parque das Águas</h4>
+                        <p>Parques</p>
+                    </div>
+
+                    <div class="client-card" data-order="2">
+                        <div class="client-logo">
+                            <img src="https://d2v5dzlf3dactd.cloudfront.net/exceed.jpg" alt="Exceed Park">
+                        </div>
+                        <h4>Exceed Park</h4>
+                        <p>Parques</p>
+                    </div>
+                </div>
+
+                <button class="slider-btn" onclick="slideClients(1)" aria-label="Próximo">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Form -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div>
+
+                    <div class="contact-grid">
+                        <div class="contact-form-wrapper animate-on-scroll"
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                            <h3>Pronto para transformar seu negócio?</h3>
+                            <p class="form-subtitle" style="margin-bottom: 2rem;">Clique no botão abaixo e preencha
+                                nosso
+                                formulário de contato</p>
+                            <button class="btn btn-primary" onclick="scrollToSection('hero')" style="max-width: 300px;">
+                                Entrar em Contato →
+                            </button>
+                        </div>
+
+                        <div class="contact-info-wrapper">
+                            <div class="info-card animate-on-scroll">
+                                <h3>Informações de Contato</h3>
+                                <div class="info-item">
+                                    <div class="info-icon">📞</div>
+                                    <div class="info-content">
+                                        <h4>Telefone</h4>
+                                        <p>+55 (54) 9609-5981</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">✉️</div>
+                                    <div class="info-content">
+                                        <h4>E-mail</h4>
+                                        <p>marcos.oliveira@synexus.com.br</p>
+                                    </div>
+                                </div>
+                                <!-- <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h4>Endereço</h4>
+                                <p>Rua Exemplo, 1234<br>Centro - Cidade/UF<br>CEP 00000-000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hours-card animate-on-scroll">
+                        <h3>Horário de Atendimento</h3>
+                        <div class="hours-item">
+                            <span>Segunda a Sexta</span>
+                            <span class="hours-time">8h às 18h</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sábado</span>
+                            <span class="hours-time">Fechado</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Domingo</span>
+                            <span class="hours-time">Fechado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://yuaxrzcuqtuhxxvwmiuw.supabase.co/storage/v1/object/public/temp/synexus_logo.png"
+                        alt="Synexus">
+                    <p>Transformando a contabilidade em estratégia para o crescimento sustentável do seu negócio.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook">f</a>
+                        <a href="#" class="social-link" title="Instagram">@</a>
+                        <a href="#" class="social-link" title="LinkedIn">in</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#services">Gestão Contábil</a></li>
+                        <li><a href="#services">Planejamento Tributário</a></li>
+                        <li><a href="#services">Suporte Trabalhista</a></li>
+                        <li><a href="#services">Direito Contratual</a></li>
+                        <li><a href="#services">Propriedade Intelectual</a></li>
+                        <li><a href="#services">Contencioso</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Institucional</h3>
+                    <ul>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#services">Nossos Serviços</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                        <!-- <li><a href="#">Blog</a></li> -->
+                        <!-- <li><a href="#">Trabalhe Conosco</a></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Synexus Soluções Empresariais. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll navigation
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('navMobile').classList.remove('active');
+            }
+        }
+
+        // Clients slider navigation
+        function slideClients(direction) {
+            const slider = document.getElementById('clientsSlider');
+            const cardWidth = slider.querySelector('.client-card').offsetWidth + 24; // card width + gap
+            slider.scrollBy({
+                left: direction * cardWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Services slider navigation
+        function slideServices(type, direction) {
+            const sliderId = type === 'contabil' ? 'servicesSliderContabil' : 'servicesSliderJuridica';
+            const slider = document.getElementById(sliderId);
+            const cardWidth = slider.querySelector('.service-card').offsetWidth + 24; // card width + gap
+            slider.scrollBy({
+                left: direction * cardWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('navMobile').classList.toggle('active');
+        }
+
+        // Form submission handler
+        async function handleFormSubmit(event, formId) {
+            event.preventDefault();
+
+            const form = document.getElementById(formId);
+            const successId = formId === 'heroForm' ? 'heroSuccess' : 'contactSuccess';
+            const successMessage = document.getElementById(successId);
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // Disable button and show loading state
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Enviando...';
+
+            // Collect form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                service: formData.get('service'),
+                formSource: formId,
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                // Send data to webhook using URL-encoded format to avoid CORS preflight
+                const response = await fetch('https://n8n-editor.fdje1h.easypanel.host/webhook/responses', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(data).toString()
+                });
+
+                if (response.ok) {
+                    // Report conversion to Google Ads
+                    gtag_report_conversion();
+
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    successMessage.innerHTML = '✓ Mensagem enviada com sucesso! Entraremos em contato em breve.';
+
+                    // Reset form
+                    form.reset();
+                } else {
+                    throw new Error('Erro ao enviar formulário');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                // Show error message
+                successMessage.style.display = 'block';
+                successMessage.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                successMessage.innerHTML = '✗ Erro ao enviar. Tente novamente ou entre em contato diretamente.';
+            } finally {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    successMessage.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                }, 5000);
+            }
+        }
+
+        // Phone mask
+        function applyPhoneMask(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+
+            if (value.length > 6) {
+                value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+            } else if (value.length > 2) {
+                value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            } else if (value.length > 0) {
+                value = `(${value}`;
+            }
+
+            input.value = value;
+        }
+
+        // Apply mask to phone inputs
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', () => applyPhoneMask(input));
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Sort client cards by data-order attribute
+        function sortClientCards() {
+            const slider = document.getElementById('clientsSlider');
+            const cards = Array.from(slider.querySelectorAll('.client-card'));
+
+            // Sort cards by data-order (ascending)
+            cards.sort((a, b) => {
+                const orderA = parseInt(a.getAttribute('data-order')) || 999;
+                const orderB = parseInt(b.getAttribute('data-order')) || 999;
+                return orderA - orderB;
+            });
+
+            // Remove all cards and re-append in sorted order
+            cards.forEach(card => slider.appendChild(card));
+        }
+
+        // Sort cards on page load
+        sortClientCards();
+    </script>
+</body>
+
+</html>
