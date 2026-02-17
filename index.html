@@ -1414,22 +1414,33 @@
             </a>
 
             <nav class="nav-desktop">
-                <button class="nav-link" onclick="scrollToSection('hero')">Início</button>
-                <button class="nav-link" onclick="scrollToSection('services')">Serviços</button>
-                <button class="nav-link" onclick="scrollToSection('about')">Sobre</button>
-                <button class="nav-link" onclick="scrollToSection('clients')">Clientes</button>
-                <button class="nav-link cta" onclick="scrollToSection('heroName')">Fale Conosco</button>
+                <button class="nav-link" onclick="scrollToSection('hero')"
+                    data-click-text="Nav Desktop - Início">Início</button>
+                <button class="nav-link" onclick="scrollToSection('services')"
+                    data-click-text="Nav Desktop - Serviços">Serviços</button>
+                <button class="nav-link" onclick="scrollToSection('about')"
+                    data-click-text="Nav Desktop - Sobre">Sobre</button>
+                <button class="nav-link" onclick="scrollToSection('clients')"
+                    data-click-text="Nav Desktop - Clientes">Clientes</button>
+                <button class="nav-link cta" onclick="scrollToSection('heroName')"
+                    data-click-text="Nav Desktop - Fale Conosco">Fale Conosco</button>
             </nav>
 
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu"
+                data-click-text="Menu Toggle Mobile">☰</button>
         </div>
 
         <nav class="nav-mobile" id="navMobile">
-            <button class="nav-link" onclick="scrollToSection('hero')">Início</button>
-            <button class="nav-link" onclick="scrollToSection('services')">Serviços</button>
-            <button class="nav-link" onclick="scrollToSection('about')">Sobre</button>
-            <button class="nav-link" onclick="scrollToSection('clients')">Clientes</button>
-            <button class="nav-link cta" onclick="scrollToSection('heroName')">Fale Conosco</button>
+            <button class="nav-link" onclick="scrollToSection('hero')"
+                data-click-text="Nav Mobile - Início">Início</button>
+            <button class="nav-link" onclick="scrollToSection('services')"
+                data-click-text="Nav Mobile - Serviços">Serviços</button>
+            <button class="nav-link" onclick="scrollToSection('about')"
+                data-click-text="Nav Mobile - Sobre">Sobre</button>
+            <button class="nav-link" onclick="scrollToSection('clients')"
+                data-click-text="Nav Mobile - Clientes">Clientes</button>
+            <button class="nav-link cta" onclick="scrollToSection('heroName')"
+                data-click-text="Nav Mobile - Fale Conosco">Fale Conosco</button>
         </nav>
     </header>
 
@@ -1504,7 +1515,8 @@
                                 <option value="Outros Serviços">Outros Serviços</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary"
+                            data-click-text="Hero Form - Quero uma Consultoria">
                             Quero uma Consultoria →
                         </button>
                         <div class="success-message" id="heroSuccess">
@@ -1525,7 +1537,8 @@
             </div>
 
             <div class="clients-wrapper">
-                <button class="slider-btn" onclick="slideClients(-1)" aria-label="Anterior">←</button>
+                <button class="slider-btn" onclick="slideClients(-1)" aria-label="Anterior"
+                    data-click-text="Clientes Slider - Anterior">←</button>
 
                 <div class="clients-slider" id="clientsSlider">
                     <!-- Indústria -->
@@ -1700,7 +1713,8 @@
                     </div>
                 </div>
 
-                <button class="slider-btn" onclick="slideClients(1)" aria-label="Próximo">→</button>
+                <button class="slider-btn" onclick="slideClients(1)" aria-label="Próximo"
+                    data-click-text="Clientes Slider - Próximo">→</button>
             </div>
         </div>
     </section>
@@ -1724,7 +1738,7 @@
 
             <div class="services-slider-wrapper">
                 <button class="slider-btn slider-btn-services" onclick="slideServices('contabil', -1)"
-                    aria-label="Anterior">←</button>
+                    aria-label="Anterior" data-click-text="Serviços Contábil Slider - Anterior">←</button>
 
                 <div class="services-slider" id="servicesSliderContabil">
                     <div class="service-card service-card-numbered">
@@ -1751,7 +1765,7 @@
                 </div>
 
                 <button class="slider-btn slider-btn-services" onclick="slideServices('contabil', 1)"
-                    aria-label="Próximo">→</button>
+                    aria-label="Próximo" data-click-text="Serviços Contábil Slider - Próximo">→</button>
             </div>
 
             <!-- Assessoria Jurídica -->
@@ -1762,7 +1776,7 @@
 
             <div class="services-slider-wrapper">
                 <button class="slider-btn slider-btn-services" onclick="slideServices('juridica', -1)"
-                    aria-label="Anterior">←</button>
+                    aria-label="Anterior" data-click-text="Serviços Jurídica Slider - Anterior">←</button>
 
                 <div class="services-slider" id="servicesSliderJuridica">
                     <div class="service-card">
@@ -1789,7 +1803,7 @@
                 </div>
 
                 <button class="slider-btn slider-btn-services" onclick="slideServices('juridica', 1)"
-                    aria-label="Próximo">→</button>
+                    aria-label="Próximo" data-click-text="Serviços Jurídica Slider - Próximo">→</button>
             </div>
         </div>
     </section>
@@ -1913,7 +1927,8 @@
                             <p class="form-subtitle" style="margin-bottom: 2rem;">Clique no botão abaixo e preencha
                                 nosso
                                 formulário de contato</p>
-                            <button class="btn btn-primary" onclick="scrollToSection('hero')" style="max-width: 300px;">
+                            <button class="btn btn-primary" onclick="scrollToSection('hero')" style="max-width: 300px;"
+                                data-click-text="Contato - Entrar em Contato">
                                 Entrar em Contato →
                             </button>
                         </div>
@@ -1974,7 +1989,7 @@
                     <p>Transformando a contabilidade em estratégia para o crescimento sustentável do seu negócio.</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/synexus.solucoes/" class="social-link" title="Instagram"
-                            target="_blank" rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer" data-click-text="Footer - Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="currentColor">
                                 <path
@@ -1982,7 +1997,8 @@
                             </svg>
                         </a>
                         <a href="https://wa.me/5554996095981?text=Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20os%20servi%C3%A7os%20de%20contabilidade%20da%20Synexus"
-                            class="social-link" title="WhatsApp" target="_blank" rel="noopener noreferrer">
+                            class="social-link" title="WhatsApp" target="_blank" rel="noopener noreferrer"
+                            data-click-text="Footer - WhatsApp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="currentColor">
                                 <path
@@ -1995,21 +2011,25 @@
                 <div class="footer-column">
                     <h3>Serviços</h3>
                     <ul>
-                        <li><a href="#services">Gestão Contábil</a></li>
-                        <li><a href="#services">Planejamento Tributário</a></li>
-                        <li><a href="#services">Suporte Trabalhista</a></li>
-                        <li><a href="#services">Direito Contratual</a></li>
-                        <li><a href="#services">Propriedade Intelectual</a></li>
-                        <li><a href="#services">Contencioso</a></li>
+                        <li><a href="#services" data-click-text="Footer - Gestão Contábil">Gestão Contábil</a></li>
+                        <li><a href="#services" data-click-text="Footer - Planejamento Tributário">Planejamento
+                                Tributário</a></li>
+                        <li><a href="#services" data-click-text="Footer - Suporte Trabalhista">Suporte Trabalhista</a>
+                        </li>
+                        <li><a href="#services" data-click-text="Footer - Direito Contratual">Direito Contratual</a>
+                        </li>
+                        <li><a href="#services" data-click-text="Footer - Propriedade Intelectual">Propriedade
+                                Intelectual</a></li>
+                        <li><a href="#services" data-click-text="Footer - Contencioso">Contencioso</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h3>Institucional</h3>
                     <ul>
-                        <li><a href="#about">Sobre Nós</a></li>
-                        <li><a href="#services">Nossos Serviços</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#about" data-click-text="Footer - Sobre Nós">Sobre Nós</a></li>
+                        <li><a href="#services" data-click-text="Footer - Nossos Serviços">Nossos Serviços</a></li>
+                        <li><a href="#contact" data-click-text="Footer - Contato">Contato</a></li>
                         <!-- <li><a href="#">Blog</a></li> -->
                         <!-- <li><a href="#">Trabalhe Conosco</a></li> -->
                     </ul>
