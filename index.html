@@ -2161,6 +2161,33 @@
                 });
 
                 if (response.ok) {
+                    // Configuração de conversões otimizadas (Enhanced Conversions)
+                    let cleanPhone = data.phone ? data.phone.replace(/\D/g, '') : '';
+                    if (cleanPhone && !cleanPhone.startsWith('55')) {
+                        cleanPhone = '55' + cleanPhone;
+                    }
+                    if (cleanPhone) {
+                        cleanPhone = '+' + cleanPhone;
+                    }
+
+                    let firstName = '';
+                    let lastName = '';
+                    if (data.name) {
+                        const nameParts = data.name.trim().split(/\s+/);
+                        firstName = nameParts[0];
+                        if (nameParts.length > 1) {
+                            lastName = nameParts.slice(1).join(' ');
+                        }
+                    }
+
+                    gtag('set', 'user_data', {
+                        "phone_number": cleanPhone,
+                        "address": {
+                            "first_name": firstName,
+                            "last_name": lastName
+                        }
+                    });
+
                     // Report conversion to Google Ads
                     gtag_report_conversion();
 
