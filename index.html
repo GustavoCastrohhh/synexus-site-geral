@@ -100,14 +100,12 @@
 
         /* Header */
         header {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;
             z-index: 100;
-            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 50%, #422006 100%);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: transparent;
             transition: var(--transition);
         }
 
@@ -259,10 +257,15 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 50%, #422006 100%);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.85) 50%, rgba(66, 32, 6, 0.85) 100%), url('https://d2v5dzlf3dactd.cloudfront.net/background_00.jpg');
+            background-size: cover;
+            background-position: center;
             padding: 8rem 0 5rem;
             position: relative;
             overflow: hidden;
+            border-radius: 0 0 3rem 3rem;
+            z-index: 2;
+            margin-bottom: -6rem;
         }
 
         .hero::before {
@@ -1452,7 +1455,7 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header -->
+    <!-- Início da Sessão: Header -->
     <header id="header">
         <div class="header-content">
             <a href="#" class="logo">
@@ -1489,8 +1492,9 @@
                 data-click-text="Nav Mobile - Fale Conosco">Fale Conosco</button>
         </nav>
     </header>
+    <!-- End Session: Header -->
 
-    <!-- Hero Section with Form -->
+    <!-- Start Session: Hero -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-grid">
@@ -1573,199 +1577,420 @@
             </div>
         </div>
     </section>
+    <!-- End of Session: Hero -->
 
-    <!-- Clients Section -->
-    <section class="clients" id="clients">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nossos Clientes</h2>
-                <p class="section-subtitle">Empresas que confiam em nossa expertise para crescer com segurança</p>
-            </div>
+    <!-- Start of Session: Clientes -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .clientes-section {
+            width: 100%;
+            overflow: hidden;
+            padding: 10rem 0 5rem;
+            background-color: #000000;
+            position: relative;
+            z-index: 1;
+        }
 
-            <div class="clients-wrapper">
-                <button class="slider-btn" onclick="slideClients(-1)" aria-label="Anterior"
-                    data-click-text="Clientes Slider - Anterior">←</button>
+        .clientes-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at top right, #111827, #000000, #000000);
+            opacity: 0.5;
+            z-index: -1;
+        }
 
-                <div class="clients-slider" id="clientsSlider">
-                    <!-- Indústria -->
-                    <div class="client-card" data-order="">
-                        <div class="client-logo">
-                            <!-- <img src="URL_DA_IMAGEM" alt="Studio Vêneto"> -->
-                            SV
-                        </div>
-                        <h4>Studio Vêneto</h4>
-                        <p>Indústria</p>
-                    </div>
 
-                    <div class="client-card" data-order="3">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/dauper.jpg" alt="Dauper">
-                        </div>
-                        <h4>Dauper</h4>
-                        <p>Indústria</p>
-                    </div>
 
-                    <!-- Comércio -->
-                    <div class="client-card" data-order="1">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/cristais-de-gramado.jpg"
-                                alt="Cristais de Gramado">
-                        </div>
-                        <h4>Cristais de Gramado</h4>
-                        <p>Comércio</p>
-                    </div>
+        .clientes-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+            z-index: 2;
+        }
 
-                    <div class="client-card" data-order="7">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/nicolly-almeida-store.jpg"
-                                alt="Nicolly Almeida Store">
-                        </div>
-                        <h4>Nicolly Almeida Store</h4>
-                        <p>Comércio</p>
-                    </div>
+        .clientes-header h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0 0 0.75rem 0;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
 
-                    <div class="client-card" data-order="">
-                        <div class="client-logo">
-                            <!-- <img src="URL_DA_IMAGEM" alt="Fruteira Helena"> -->
-                            FH
-                        </div>
-                        <h4>Fruteira Helena</h4>
-                        <p>Comércio</p>
-                    </div>
+        .clientes-header p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            color: #9ca3af;
+            margin: 0;
+            line-height: 1.5;
+        }
 
-                    <div class="client-card" data-order="4">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/farmacia-bem-estar.png"
-                                alt="Farmácia Bem Estar">
-                        </div>
-                        <h4>Farmácia Bem Estar</h4>
-                        <p>Comércio</p>
-                    </div>
+        .clientes-swiper-wrap {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
 
-                    <!-- Serviço -->
-                    <div class="client-card" data-order="8">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/gv-sports.jpg" alt="G.V. Sports Academia">
-                        </div>
-                        <h4>G.V. Sports Academia</h4>
-                        <p>Serviço</p>
-                    </div>
+        .clientes-swiper {
+            padding: 4rem 0;
+            /* Add vertical padding so the box-shadow isn't clipped */
+        }
 
-                    <div class="client-card" data-order="9">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/loca-mais.jpg" alt="Locadora Locamais">
-                        </div>
-                        <h4>Locadora Locamais</h4>
-                        <p>Serviço</p>
-                    </div>
+        .clientes-swiper .swiper-slide {
+            width: 520px;
+            height: 380px;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            box-shadow: none;
+            transform-origin: center center;
+        }
 
-                    <div class="client-card" data-order="5">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/paranhana-automecanica.jpg"
-                                alt="Paranhana Automecanica">
-                        </div>
-                        <h4>Paranhana Automecanica</h4>
-                        <p>Serviço</p>
-                    </div>
+        /* Card do meio (ativo) — efeito iluminado nas bordas */
+        .clientes-swiper .swiper-slide-active {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 -10px 40px -10px rgba(255, 255, 255, 0.25), 0 10px 30px -10px rgba(255, 255, 255, 0.25), 0 30px 60px -15px rgba(0, 0, 0, 0.85);
+            cursor: default;
+            z-index: 5;
+        }
 
-                    <div class="client-card" data-order="6">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/sana-cure.jpg"
-                                alt="Saná Cure Estética e Tratamentos">
-                        </div>
-                        <h4>Saná Cure Estética e Tratamentos</h4>
-                        <p>Serviço</p>
-                    </div>
+        /* Cards inativos — efeito gradiente acinzentado */
+        .clientes-swiper .swiper-slide:not(.swiper-slide-active)::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.75) 0%, rgba(40, 40, 40, 0.55) 50%, rgba(20, 20, 20, 0.75) 100%);
+            border-radius: 1rem;
+            z-index: 15;
+            pointer-events: none;
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-                    <div class="client-card" data-order="">
-                        <div class="client-logo">
-                            <!-- <img src="URL_DA_IMAGEM" alt="Marlon Santos Representações"> -->
-                            MS
-                        </div>
-                        <h4>Marlon Santos Representações</h4>
-                        <p>Serviço</p>
-                    </div>
+        /* Borda gradiente nos cards inativos */
+        .clientes-swiper .swiper-slide:not(.swiper-slide-active)::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            padding: 1.5px;
+            background: linear-gradient(135deg, rgba(160, 160, 160, 0.5) 0%, rgba(100, 100, 100, 0.8) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            z-index: 16;
+            pointer-events: none;
+        }
 
-                    <div class="client-card" data-order="">
-                        <div class="client-logo">
-                            <!-- <img src="URL_DA_IMAGEM" alt="GPS Construções"> -->
-                            GP
-                        </div>
-                        <h4>GPS Construções</h4>
-                        <p>Serviço</p>
-                    </div>
+        .clientes-swiper .swiper-slide:not(.swiper-slide-active):hover::after {
+            opacity: 0.5;
+        }
 
-                    <div class="client-card" data-order="">
-                        <div class="client-logo">
-                            <!-- <img src="URL_DA_IMAGEM" alt="Facilita Log"> -->
-                            FL
-                        </div>
-                        <h4>Facilita Log</h4>
-                        <p>Serviço</p>
-                    </div>
+        /* Card background image */
+        .cl-card-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+        }
 
-                    <div class="client-card" data-order="">
-                        <div class="client-logo">
-                            <!-- <img src="URL_DA_IMAGEM" alt="Construtora Abel Wolf"> -->
-                            AW
-                        </div>
-                        <h4>Construtora Abel Wolf</h4>
-                        <p>Serviço</p>
-                    </div>
+        /* Gradient overlay — dark on the left side */
+        .cl-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.2) 100%);
+        }
 
-                    <div class="client-card" data-order="10">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/aguia-branca-turismo.jpg"
-                                alt="Águia Branca Turismo">
-                        </div>
-                        <h4>Águia Branca Turismo</h4>
-                        <p>Serviço</p>
-                    </div>
+        /* For cards without images */
+        .cl-card-bg-fallback {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, #2d3748 0%, #1a202c 100%);
+        }
 
-                    <div class="client-card" data-order="11">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/aguia-tour.jpg" alt="Águia Tour">
-                        </div>
-                        <h4>Águia Tour</h4>
-                        <p>Serviço</p>
-                    </div>
+        /* Logo badge */
+        .cl-badge {
+            position: absolute;
+            z-index: 20;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
 
-                    <!-- Holding -->
-                    <div class="client-card" data-order="">
-                        <div class="client-logo">
-                            <!-- <img src="URL_DA_IMAGEM" alt="CDG Participações"> -->
-                            CD
-                        </div>
-                        <h4>CDG Participações</h4>
-                        <p>Holding</p>
-                    </div>
+        /* Active card: badge top-left */
+        .swiper-slide-active .cl-badge {
+            width: 8rem;
+            height: 8rem;
+            top: 1.5rem;
+            left: 1.5rem;
+            transform: none;
+            background: #ffffff;
+        }
 
-                    <!-- Parques -->
-                    <div class="client-card" data-order="">
-                        <div class="client-logo">
-                            <!-- <img src="URL_DA_IMAGEM" alt="Parque das Águas"> -->
-                            PA
-                        </div>
-                        <h4>Parque das Águas</h4>
-                        <p>Parques</p>
-                    </div>
+        /* Inactive card: badge top-left, same size */
+        .swiper-slide:not(.swiper-slide-active) .cl-badge {
+            width: 8rem;
+            height: 8rem;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: rgba(255, 255, 255, 0.95);
+        }
 
-                    <div class="client-card" data-order="2">
-                        <div class="client-logo">
-                            <img src="https://d2v5dzlf3dactd.cloudfront.net/exceed.jpg" alt="Exceed Park">
-                        </div>
-                        <h4>Exceed Park</h4>
-                        <p>Parques</p>
-                    </div>
+        .cl-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .cl-badge-initials {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .swiper-slide-active .cl-badge-initials {
+            font-size: 1.25rem;
+            color: #1a1a1a;
+        }
+
+        .swiper-slide:not(.swiper-slide-active) .cl-badge-initials {
+            font-size: 0.8rem;
+        }
+
+        .swiper-slide:not(.swiper-slide-active) .cl-badge.cl-badge--no-img {
+            background: rgba(42, 42, 42, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .swiper-slide-active .cl-badge.cl-badge--no-img {
+            background: rgba(42, 42, 42, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        /* Text content — positioned below badge */
+        .cl-card-text {
+            position: absolute;
+            left: 1.5rem;
+            right: 1.5rem;
+            z-index: 20;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+
+        .cl-card-text h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 0.15rem 0;
+            line-height: 1.2;
+        }
+
+        .swiper-slide-active .cl-card-text h3 {
+            font-size: 3rem;
+        }
+
+        .swiper-slide:not(.swiper-slide-active) .cl-card-text h3 {
+            font-size: 3rem;
+        }
+
+        .cl-card-text p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .swiper-slide-active .cl-card-text p {
+            font-size: 0.9rem;
+            color: #d1d5db;
+        }
+
+        .swiper-slide:not(.swiper-slide-active) .cl-card-text p {
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+
+        /* Swiper navigation arrows */
+        .clientes-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+            outline: none;
+        }
+
+        .clientes-nav-btn:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .clientes-nav-btn svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .clientes-nav-prev {
+            left: 0;
+        }
+
+        .clientes-nav-next {
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            .clientes-swiper .swiper-slide {
+                width: 320px;
+                height: 340px;
+            }
+
+            .clientes-swiper-wrap {
+                padding: 0 2rem;
+            }
+
+            .clientes-nav-btn svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            .swiper-slide-active .cl-badge,
+            .swiper-slide:not(.swiper-slide-active) .cl-badge {
+                width: 5.5rem;
+                height: 5.5rem;
+            }
+
+            .swiper-slide-active .cl-card-text h3,
+            .swiper-slide:not(.swiper-slide-active) .cl-card-text h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <section class="clientes-section" id="clients">
+        <div class="clientes-header">
+            <h2>Nossos Clientes</h2>
+            <p>Empresas que confiam em nossa expertise para crescer com segurança</p>
+        </div>
+
+        <div class="clientes-swiper-wrap">
+            <!-- Navigation Arrows -->
+            <button class="clientes-nav-btn clientes-nav-prev" id="clientesPrev" aria-label="Anterior">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="clientes-nav-btn clientes-nav-next" id="clientesNext" aria-label="Próximo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+
+            <div class="swiper clientes-swiper">
+                <div class="swiper-wrapper" id="clientesSwiperWrapper">
+                    <!-- Slides injected by JS -->
                 </div>
-
-                <button class="slider-btn" onclick="slideClients(1)" aria-label="Próximo"
-                    data-click-text="Clientes Slider - Próximo">→</button>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        (function () {
+            const clients = [
+                { name: 'Cristais de Gramado', type: 'Comércio', logo: 'https://d2v5dzlf3dactd.cloudfront.net/cristais-de-gramado.jpg', bg: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/18/56/fb/showroom-com-mais-de.jpg?w=1200&h=900&s=1' },
+                { name: 'Dauper', type: 'Indústria', logo: 'https://d2v5dzlf3dactd.cloudfront.net/dauper.jpg', bg: 'https://static.wixstatic.com/media/8f46fe_d0b3084cb3a942338bcff46521137ad5~mv2.jpg/v1/fill/w_1200,h_627,al_c,q_85,enc_auto/8f46fe_d0b3084cb3a942338bcff46521137ad5~mv2.jpg' },
+                { name: 'Exceed Park', type: 'Parques', logo: 'https://d2v5dzlf3dactd.cloudfront.net/exceed.jpg', bg: 'https://exceedpark.com.br/wp-content/uploads/2025/02/fachada-parque-exceed-gramado.jpg' },
+                { name: 'Nicolly Almeida Store', type: 'Comércio', logo: 'https://d2v5dzlf3dactd.cloudfront.net/nicolly-almeida-store.jpg', bg: '' },
+                { name: 'Farmácia Bem Estar', type: 'Comércio', logo: 'https://d2v5dzlf3dactd.cloudfront.net/farmacia-bem-estar.png', bg: '' },
+                { name: 'Paranhana Automecanica', type: 'Serviço', logo: 'https://d2v5dzlf3dactd.cloudfront.net/paranhana-automecanica.jpg', bg: '' },
+                { name: 'Saná Cure Estética e Tratamentos', type: 'Serviço', logo: 'https://d2v5dzlf3dactd.cloudfront.net/sana-cure.jpg', bg: '' },
+                { name: 'G.V. Sports Academia', type: 'Serviço', logo: 'https://d2v5dzlf3dactd.cloudfront.net/gv-sports.jpg', bg: '' },
+                { name: 'Locadora Locamais', type: 'Serviço', logo: 'https://d2v5dzlf3dactd.cloudfront.net/loca-mais.jpg', bg: '' },
+                { name: 'Águia Branca Turismo', type: 'Serviço', logo: 'https://d2v5dzlf3dactd.cloudfront.net/aguia-branca-turismo.jpg', bg: '' },
+                { name: 'Águia Tour', type: 'Serviço', logo: 'https://d2v5dzlf3dactd.cloudfront.net/aguia-tour.jpg', bg: '' },
+                { name: 'Studio Vêneto', type: 'Indústria', logo: '', bg: '' },
+                { name: 'Fruteira Helena', type: 'Comércio', logo: '', bg: '' },
+                { name: 'Marlon Santos Representações', type: 'Serviço', logo: '', bg: '' },
+                { name: 'GPS Construções', type: 'Serviço', logo: '', bg: '' },
+                { name: 'Facilita Log', type: 'Serviço', logo: '', bg: '' },
+                { name: 'Construtora Abel Wolf', type: 'Serviço', logo: '', bg: '' },
+                { name: 'CDG Participações', type: 'Holding', logo: '', bg: '' },
+                { name: 'Parque das Águas', type: 'Parques', logo: '', bg: '' }
+            ];
+
+            const wrapper = document.getElementById('clientesSwiperWrapper');
+
+            clients.forEach(function (c) {
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+
+                var bgHtml = c.bg
+                    ? '<div class="cl-card-bg" style="background-image:url(\'' + c.bg + '\');"></div>'
+                    : '<div class="cl-card-bg-fallback"></div>';
+
+                var badgeClass = c.logo ? 'cl-badge' : 'cl-badge cl-badge--no-img';
+                var badgeContent = c.logo
+                    ? '<img src="' + c.logo + '" alt="' + c.name + ' Logo" />'
+                    : '<span class="cl-badge-initials">' + c.name.substring(0, 2).toUpperCase() + '</span>';
+
+                slide.innerHTML = bgHtml +
+                    '<div class="cl-card-overlay"></div>' +
+                    '<div class="' + badgeClass + '">' + badgeContent + '</div>' +
+                    '<div class="cl-card-text">' +
+                    '<h3>' + c.name + '</h3>' +
+                    '<p>' + c.type + '</p>' +
+                    '</div>';
+
+                wrapper.appendChild(slide);
+            });
+
+            new Swiper('.clientes-swiper', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                initialSlide: 0,
+                loop: true,
+                speed: 600,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: -40,
+                    depth: 120,
+                    modifier: 1,
+                    slideShadows: false
+                },
+                navigation: {
+                    nextEl: '#clientesNext',
+                    prevEl: '#clientesPrev'
+                }
+            });
+        })();
+    </script>
+    <!-- End of Session: Clientes -->
+
+    <!-- Start of Session: Serviços -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
@@ -1853,8 +2078,9 @@
             </div>
         </div>
     </section>
+    <!-- End of Session: Serviços -->
 
-    <!-- About Section -->
+    <!-- Start of Session: Sobre -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
@@ -1922,8 +2148,9 @@
                 </div>
             </div>
     </section>
+    <!-- End of Session: Sobre -->
 
-    <!-- Differentials Section -->
+    <!-- Start of Session: Diferenciais -->
     <section class="differentials" id="differentials">
         <div class="container">
             <div class="section-header">
@@ -1958,9 +2185,10 @@
             </div>
         </div>
     </section>
+    <!-- End of Session: Diferenciais -->
 
 
-    <!-- Contact Section with Form -->
+    <!-- Start of Session: Contato -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
@@ -2024,8 +2252,9 @@
             </div>
         </div>-->
     </section>
+    <!-- End of Session: Contato -->
 
-    <!-- Footer -->
+    <!-- Start of Session: Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -2088,6 +2317,7 @@
             </div>
         </div>
     </footer>
+    <!-- End of Session: Footer -->
 
     <script>
         // Smooth scroll navigation
@@ -2160,7 +2390,7 @@
                 });
 
                 if (response.ok) {
-                    // Configuração de conversões otimizadas (Enhanced Conversions)
+                    // Optimized conversion configurations (Enhanced Conversions Google Ads)
                     let cleanPhone = data.phone ? data.phone.replace(/\D/g, '') : '';
                     if (cleanPhone && !cleanPhone.startsWith('55')) {
                         cleanPhone = '55' + cleanPhone;
@@ -2569,4 +2799,4 @@
     </a>
 </body>
 
-</html>
+</html>9
