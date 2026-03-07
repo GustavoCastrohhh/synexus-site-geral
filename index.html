@@ -2401,6 +2401,16 @@
     <!-- End of Session: Footer -->
 
     <script>
+        // Store ads tracking parameters on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const trackingParams = ['gclid', 'wbraid', 'gbraid', 'fbclid', 'utm_source', 'utm_medium', 'utm_campaign'];
+            trackingParams.forEach(param => {
+                const val = urlParams.get(param);
+                if (val) localStorage.setItem(param, val);
+            });
+        });
+
         // Smooth scroll navigation
         function scrollToSection(id) {
             const element = document.getElementById(id);
@@ -2450,14 +2460,23 @@
             submitButton.disabled = true;
             submitButton.innerHTML = 'Enviando...';
 
-            // Collect form data
+            // Collect form data and tracking parameters
             const formData = new FormData(form);
+            const urlParams = new URLSearchParams(window.location.search);
+
             const data = {
                 name: formData.get('name'),
                 phone: formData.get('phone'),
                 service: formData.get('service'),
                 formSource: formId,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                gclid: urlParams.get('gclid') || localStorage.getItem('gclid') || '',
+                wbraid: urlParams.get('wbraid') || localStorage.getItem('wbraid') || '',
+                gbraid: urlParams.get('gbraid') || localStorage.getItem('gbraid') || '',
+                fbclid: urlParams.get('fbclid') || localStorage.getItem('fbclid') || '',
+                utm_source: urlParams.get('utm_source') || localStorage.getItem('utm_source') || '',
+                utm_medium: urlParams.get('utm_medium') || localStorage.getItem('utm_medium') || '',
+                utm_campaign: urlParams.get('utm_campaign') || localStorage.getItem('utm_campaign') || ''
             };
 
             try {
