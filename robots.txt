@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://synexus.com.br/sitemap.xml
