@@ -275,28 +275,18 @@
     }
 
     function submitLeadSilently(name, phone) {
-        // Build a synthetic event compatible with form.js handleFormSubmit
-        const fakeForm = document.createElement('form');
-        fakeForm.innerHTML = `
-            <input name="name"    value="${escapeAttr(name)}">
-            <input name="phone"   value="${escapeAttr(phone)}">
-            <input name="service" value="Abrir MEI (Chatbot)">
-        `;
-        document.body.appendChild(fakeForm);
-
-        if (typeof handleFormSubmit === 'function') {
-            const syntheticEvent = {
-                preventDefault: () => { },
-                target: fakeForm,
+        if (typeof window.submitLeadData === 'function') {
+            const data = {
+                name: name,
+                phone: phone,
+                service: "Abrir MEI (Chatbot)",
+                formSource: "chatbot-silent"
             };
-            handleFormSubmit(syntheticEvent, 'chatbot');
-        }
 
-        fakeForm.remove();
-
-        // Track Google Ads conversion if available
-        if (typeof gtag_report_conversion === 'function') {
-            gtag_report_conversion();
+            // Dispara sem travar e não precisa mexer no DOM
+            window.submitLeadData(data).catch(err => {
+                console.error("Erro no envio do lead via chatbot:", err);
+            });
         }
     }
 
