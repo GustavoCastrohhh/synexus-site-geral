@@ -25,7 +25,7 @@
             message: 'Antes de eu te passar para nosso consultor, qual é o seu <strong>nome completo</strong>?',
             type: 'text',
             placeholder: 'Digite seu nome…',
-            validate: v => v.trim().length >= 2 ? null : 'Por favor, informe seu nome.',
+            validate: v => v.trim().split(/\s+/).length >= 2 ? null : 'Por favor, informe nome e sobrenome.',
         },
         {
             key: 'situation',
@@ -213,21 +213,24 @@
     function handleChoice(step, choice) {
         if (inputLocked) return;
         // First step greeting branch
-        if (step.key === null && choice.startsWith('Tenho dúvidas')) {
-            appendBubble('user', escapeHtml(choice));
-            inputAreaEl.innerHTML = '';
-            botSpeak('Sem problemas! Nosso consultor vai tirar todas as suas dúvida. 😊', () => {
-                renderStep(1);
-            });
-            return;
-        }
-        if (step.key === null && choice.startsWith('Me preocupo com valores')) {
-            appendBubble('user', escapeHtml(choice));
-            inputAreaEl.innerHTML = '';
-            botSpeak('Não se preocupe pois na Synexus nossa preocupação é te ajudar por um valor que irá caber no seu bolso, sabemos da realidade de quem é ou está querendo ser MEI. 💚', () => {
-                renderStep(1);
-            });
-            return;
+        if (step.key === null) {
+            collectedData.start_choice = choice;
+            if (choice.startsWith('Tenho dúvidas')) {
+                appendBubble('user', escapeHtml(choice));
+                inputAreaEl.innerHTML = '';
+                botSpeak('Sem problemas! Nosso consultor vai tirar todas as suas dúvida. 😊', () => {
+                    renderStep(1);
+                });
+                return;
+            }
+            if (choice.startsWith('Me preocupo com valores')) {
+                appendBubble('user', escapeHtml(choice));
+                inputAreaEl.innerHTML = '';
+                botSpeak('Não se preocupe pois na Synexus nossa preocupação é te ajudar por um valor que irá caber no seu bolso, sabemos da realidade de quem é ou está querendo ser MEI. 💚', () => {
+                    renderStep(1);
+                });
+                return;
+            }
         }
         if (step.key !== null) collectedData[step.key] = choice;
         appendBubble('user', escapeHtml(choice));
@@ -281,6 +284,7 @@
                 phone: collectedData.phone || '',
                 situation: collectedData.situation || '',
                 activity: collectedData.activity || '',
+                start_choice: collectedData.start_choice || '',
                 service: "Abrir MEI (Chatbot)",
                 formSource: "chatbot-silent"
             };
