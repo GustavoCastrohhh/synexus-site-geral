@@ -279,13 +279,20 @@
 
     function submitLeadSilently(collectedData) {
         if (typeof window.submitLeadData === 'function') {
+            let serviceName = "Abrir MEI (Chatbot)";
+            if (collectedData.situation === 'Já tenho MEI, mas preciso de ajuda') {
+                serviceName = "Consultoria MEI (Chatbot)";
+            } else if (collectedData.situation === 'Quero migrar do MEI para empresa') {
+                serviceName = "Migração MEI (Chatbot)";
+            }
+
             const data = {
                 name: collectedData.name || '',
                 phone: collectedData.phone || '',
                 situation: collectedData.situation || '',
                 activity: collectedData.activity || '',
                 start_choice: collectedData.start_choice || '',
-                service: "Abrir MEI (Chatbot)",
+                service: serviceName,
                 formSource: "chatbot-silent"
             };
 
