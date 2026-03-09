@@ -78,25 +78,7 @@
     <link rel="stylesheet" href="../assets/css/hero.css?v=1.0.0">
     <link rel="stylesheet" href="../assets/css/abrirmei.css?v=1.0.0">
 
-    <!-- CSS Não-Crítico (adiado) -->
-    <link rel="preload" href="../assets/css/clients.css?v=1.0.0" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../assets/css/services.css?v=1.0.0" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../assets/css/about.css?v=1.0.0" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../assets/css/differentials.css?v=1.0.0" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../assets/css/contact.css?v=1.0.0" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../assets/css/footer.css?v=1.0.0" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../assets/css/popup.css?v=1.0.0" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <!-- <link rel="preload" href="../assets/css/whatsapp.css?v=1.0.0" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
-    <!-- Chatbot widget (não-crítico) -->
-    <link rel="preload" href="../assets/css/chatbot.css?v=1.0.0" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
+    <!-- CSS Não-Crítico (Lazy Load via JS no fim do body) -->
     <noscript>
         <link rel="stylesheet" href="../assets/css/clients.css?v=1.0.0">
         <link rel="stylesheet" href="../assets/css/services.css?v=1.0.0">
@@ -216,8 +198,9 @@
             <div class="nws-wrapper animate-on-scroll">
 
                 <!-- Featured card –– imagem de fundo + gradiente -->
-                <article class="nws-card nws-card--featured"
-                    style="background-image: url('../assets/img/news_mei_cancelado.png');">
+                <article class="nws-card nws-card--featured">
+                    <img class="nws-card-bg-img" src="https://d2v5dzlf3dactd.cloudfront.net/news_mei_cancelado.png"
+                        loading="lazy" alt="Notícia MEI Cancelado">
                     <div class="nws-card-overlay">
                         <span class="nws-label nws-label--danger">Receita Federal</span>
                         <h3 class="nws-headline-lg">Mais de 2 milhões de MEIs são cancelados por omissão de declarações
@@ -234,8 +217,9 @@
                 </article>
 
                 <!-- Two smaller cards -->
-                <article class="nws-card nws-card--sm"
-                    style="background-image: url('../assets/img/news_mei_multa.png');">
+                <article class="nws-card nws-card--sm">
+                    <img class="nws-card-bg-img" src="https://d2v5dzlf3dactd.cloudfront.net/news_mei_multa.png"
+                        loading="lazy" alt="Notícia Multa MEI">
                     <div class="nws-card-overlay">
                         <div class="nws-card-body">
                             <span class="nws-label nws-label--warning">Nota Fiscal</span>
@@ -253,8 +237,10 @@
                     </div>
                 </article>
 
-                <article class="nws-card nws-card--sm"
-                    style="background-image: url('../assets/img/news_mei_desenquadramento.png');">
+                <article class="nws-card nws-card--sm">
+                    <img class="nws-card-bg-img"
+                        src="https://d2v5dzlf3dactd.cloudfront.net/news_mei_desenquadramento.png" loading="lazy"
+                        alt="Notícia Desenquadramento MEI">
                     <div class="nws-card-overlay">
                         <div class="nws-card-body">
                             <span class="nws-label nws-label--danger">Simples Nacional</span>
@@ -291,8 +277,9 @@
             <div class="nws-wrapper animate-on-scroll">
 
                 <!-- Featured positive card -->
-                <article class="nws-card nws-card--featured"
-                    style="background-image: url('../assets/img/news_mei_contador.png');">
+                <article class="nws-card nws-card--featured">
+                    <img class="nws-card-bg-img" src="https://d2v5dzlf3dactd.cloudfront.net/news_mei_contador.png"
+                        loading="lazy" alt="Notícia Contador MEI">
                     <div class="nws-card-overlay nws-card-overlay--green">
                         <span class="nws-label nws-label--success">Estudo de Mercado</span>
                         <h3 class="nws-headline-lg">MEIs com suporte contábil desde o 1º dia sobrevivem 3x mais que os
@@ -309,8 +296,9 @@
                 </article>
 
                 <!-- Two smaller cards -->
-                <article class="nws-card nws-card--sm"
-                    style="background-image: url('../assets/img/news_mei_cancelado.png');">
+                <article class="nws-card nws-card--sm">
+                    <img class="nws-card-bg-img" src="https://d2v5dzlf3dactd.cloudfront.net/news_mei_cancelado.png"
+                        loading="lazy" alt="Notícia MEI Cancelado">
                     <div class="nws-card-overlay">
                         <div class="nws-card-body">
                             <span class="nws-label nws-label--danger">Alerta Real</span>
@@ -328,8 +316,9 @@
                     </div>
                 </article>
 
-                <article class="nws-card nws-card--sm"
-                    style="background-image: url('../assets/img/news_mei_multa.png');">
+                <article class="nws-card nws-card--sm">
+                    <img class="nws-card-bg-img" src="https://d2v5dzlf3dactd.cloudfront.net/news_mei_multa.png"
+                        loading="lazy" alt="Notícia MEI">
                     <div class="nws-card-overlay nws-card-overlay--green">
                         <div class="nws-card-body">
                             <span class="nws-label nws-label--success">Opinião de Especialista</span>
@@ -560,14 +549,71 @@
     -->
 
     <!-- ==================== SCRIPTS ==================== -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="../assets/js/tracking.js?v=1.0.0" defer></script>
     <script src="../assets/js/ui.js?v=1.0.0" defer></script>
     <script src="../assets/js/form.js?v=1.0.0" defer></script>
-    <script src="../assets/js/clients.js?v=1.0.0" defer></script>
     <script src="../assets/js/popup.js?v=1.0.0" defer></script>
-    <script src="../assets/js/chatbot.js?v=1.0.0" defer></script>
 
+    <!-- ==================== LAZY LOAD CSS & JS ==================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Otimização de CSS
+            setTimeout(function () {
+                var cssFiles = [
+                    "../assets/css/clients.css?v=1.0.0",
+                    "../assets/css/services.css?v=1.0.0",
+                    "../assets/css/about.css?v=1.0.0",
+                    "../assets/css/differentials.css?v=1.0.0",
+                    "../assets/css/contact.css?v=1.0.0",
+                    "../assets/css/footer.css?v=1.0.0",
+                    "../assets/css/popup.css?v=1.0.0",
+                    "../assets/css/chatbot.css?v=1.0.0"
+                ];
+                var head = document.head;
+                cssFiles.forEach(function (url) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.href = url;
+                    head.appendChild(link);
+                });
+            }, 100); // Pequeno atraso para focar na renderização da dobra
+
+            // 2. Otimização de Javascript Sensível (Interação)
+            var jsLoaded = false;
+            function loadLazyJS() {
+                if (jsLoaded) return;
+                jsLoaded = true;
+
+                // Load Swiper
+                var swiperScript = document.createElement('script');
+                swiperScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+                swiperScript.onload = function () {
+                    // Após o Swiper, injetamos seus dependentes (clients) e plugins (chatbot)
+                    var clientsScript = document.createElement('script');
+                    clientsScript.src = '../assets/js/clients.js?v=1.0.0';
+                    document.body.appendChild(clientsScript);
+
+                    var chatbotScript = document.createElement('script');
+                    chatbotScript.src = '../assets/js/chatbot.js?v=1.0.0';
+                    document.body.appendChild(chatbotScript);
+                };
+                document.body.appendChild(swiperScript);
+
+                // Remove listeners
+                ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (e) {
+                    window.removeEventListener(e, loadLazyJS);
+                });
+            }
+
+            // Ativa lazy load no primeiro movimento / interação
+            ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (e) {
+                window.addEventListener(e, loadLazyJS, { passive: true, once: true });
+            });
+
+            // Fallback de segurança: carregar em 4s mesmo sem interação
+            setTimeout(loadLazyJS, 4000);
+        });
+    </script>
 </body>
 
 </html>

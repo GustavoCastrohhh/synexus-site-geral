@@ -72,14 +72,17 @@
     <link rel="stylesheet" href="assets/css/animations.css?v=1.0.0">
     <link rel="stylesheet" href="assets/css/header.css?v=1.0.0">
     <link rel="stylesheet" href="assets/css/hero.css?v=1.0.0">
-    <link rel="stylesheet" href="assets/css/clients.css?v=1.0.0">
-    <link rel="stylesheet" href="assets/css/services.css?v=1.0.0">
-    <link rel="stylesheet" href="assets/css/about.css?v=1.0.0">
-    <link rel="stylesheet" href="assets/css/differentials.css?v=1.0.0">
-    <link rel="stylesheet" href="assets/css/contact.css?v=1.0.0">
-    <link rel="stylesheet" href="assets/css/footer.css?v=1.0.0">
-    <link rel="stylesheet" href="assets/css/popup.css?v=1.0.0">
-    <link rel="stylesheet" href="assets/css/whatsapp.css?v=1.0.0">
+    <!-- CSS Não-Crítico (Lazy Load via JS no fim do body) -->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/clients.css?v=1.0.0">
+        <link rel="stylesheet" href="assets/css/services.css?v=1.0.0">
+        <link rel="stylesheet" href="assets/css/about.css?v=1.0.0">
+        <link rel="stylesheet" href="assets/css/differentials.css?v=1.0.0">
+        <link rel="stylesheet" href="assets/css/contact.css?v=1.0.0">
+        <link rel="stylesheet" href="assets/css/footer.css?v=1.0.0">
+        <link rel="stylesheet" href="assets/css/popup.css?v=1.0.0">
+        <link rel="stylesheet" href="assets/css/whatsapp.css?v=1.0.0">
+    </noscript>
 </head>
 
 <body>
@@ -504,13 +507,67 @@
     </a>
 
     <!-- ==================== SCRIPTS ==================== -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="assets/js/tracking.js?v=1.0.0" defer></script>
     <script src="assets/js/ui.js?v=1.0.0" defer></script>
     <script src="assets/js/form.js?v=1.0.0" defer></script>
-    <script src="assets/js/clients.js?v=1.0.0" defer></script>
     <script src="assets/js/popup.js?v=1.0.0" defer></script>
 
+    <!-- ==================== LAZY LOAD CSS & JS ==================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Otimização de CSS
+            setTimeout(function () {
+                var cssFiles = [
+                    "assets/css/clients.css?v=1.0.0",
+                    "assets/css/services.css?v=1.0.0",
+                    "assets/css/about.css?v=1.0.0",
+                    "assets/css/differentials.css?v=1.0.0",
+                    "assets/css/contact.css?v=1.0.0",
+                    "assets/css/footer.css?v=1.0.0",
+                    "assets/css/popup.css?v=1.0.0",
+                    "assets/css/whatsapp.css?v=1.0.0"
+                ];
+                var head = document.head;
+                cssFiles.forEach(function (url) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.href = url;
+                    head.appendChild(link);
+                });
+            }, 100);
+
+            // 2. Otimização de Javascript Sensível (Interação)
+            var jsLoaded = false;
+            function loadLazyJS() {
+                if (jsLoaded) return;
+                jsLoaded = true;
+
+                // Load Swiper
+                var swiperScript = document.createElement('script');
+                swiperScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+                swiperScript.onload = function () {
+                    // Após o Swiper, injetamos seus dependentes (clients)
+                    var clientsScript = document.createElement('script');
+                    clientsScript.src = 'assets/js/clients.js?v=1.0.0';
+                    document.body.appendChild(clientsScript);
+                };
+                document.body.appendChild(swiperScript);
+
+                // Remove listeners
+                ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (e) {
+                    window.removeEventListener(e, loadLazyJS);
+                });
+            }
+
+            // Ativa lazy load no primeiro movimento / interação
+            ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (e) {
+                window.addEventListener(e, loadLazyJS, { passive: true, once: true });
+            });
+
+            // Fallback de segurança: carregar em 4s mesmo sem interação
+            setTimeout(loadLazyJS, 4000);
+        });
+    </script>
 </body>
 
 </html>
