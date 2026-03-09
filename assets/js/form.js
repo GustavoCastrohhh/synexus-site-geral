@@ -8,6 +8,7 @@ window.submitLeadData = async function (data) {
     var urlParams = new URLSearchParams(window.location.search);
 
     data.timestamp = new Date().toISOString();
+    data.page_url = window.location.href;
     data.gclid = urlParams.get('gclid') || localStorage.getItem('gclid') || '';
     data.wbraid = urlParams.get('wbraid') || localStorage.getItem('wbraid') || '';
     data.gbraid = urlParams.get('gbraid') || localStorage.getItem('gbraid') || '';

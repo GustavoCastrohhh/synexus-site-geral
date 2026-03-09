@@ -549,10 +549,10 @@
     -->
 
     <!-- ==================== SCRIPTS ==================== -->
-    <script src="../assets/js/tracking.js?v=1.0.1" defer></script>
-    <script src="../assets/js/ui.js?v=1.0.1" defer></script>
-    <script src="../assets/js/form.js?v=1.0.1" defer></script>
-    <script src="../assets/js/popup.js?v=1.0.1" defer></script>
+    <script src="../assets/js/tracking.js?v=1.0.4" defer></script>
+    <script src="../assets/js/ui.js?v=1.0.4" defer></script>
+    <script src="../assets/js/form.js?v=1.0.4" defer></script>
+    <script src="../assets/js/popup.js?v=1.0.4" defer></script>
 
     <!-- ==================== LAZY LOAD CSS & JS ==================== -->
     <script>
@@ -560,14 +560,14 @@
             // 1. Otimização de CSS
             setTimeout(function () {
                 var cssFiles = [
-                    "../assets/css/clients.css?v=1.0.1",
-                    "../assets/css/services.css?v=1.0.1",
-                    "../assets/css/about.css?v=1.0.1",
-                    "../assets/css/differentials.css?v=1.0.1",
-                    "../assets/css/contact.css?v=1.0.1",
-                    "../assets/css/footer.css?v=1.0.1",
-                    "../assets/css/popup.css?v=1.0.1",
-                    "../assets/css/chatbot.css?v=1.0.1"
+                    "../assets/css/clients.css?v=1.0.4",
+                    "../assets/css/services.css?v=1.0.4",
+                    "../assets/css/about.css?v=1.0.4",
+                    "../assets/css/differentials.css?v=1.0.4",
+                    "../assets/css/contact.css?v=1.0.4",
+                    "../assets/css/footer.css?v=1.0.4",
+                    "../assets/css/popup.css?v=1.0.4",
+                    "../assets/css/chatbot.css?v=1.0.4"
                 ];
                 var head = document.head;
                 cssFiles.forEach(function (url) {
@@ -590,11 +590,11 @@
                 swiperScript.onload = function () {
                     // Após o Swiper, injetamos seus dependentes (clients) e plugins (chatbot)
                     var clientsScript = document.createElement('script');
-                    clientsScript.src = '../assets/js/clients.js?v=1.0.1';
+                    clientsScript.src = '../assets/js/clients.js?v=1.0.4';
                     document.body.appendChild(clientsScript);
 
                     var chatbotScript = document.createElement('script');
-                    chatbotScript.src = '../assets/js/chatbot.js?v=1.0.1';
+                    chatbotScript.src = '../assets/js/chatbot.js?v=1.0.4';
                     document.body.appendChild(chatbotScript);
                 };
                 document.body.appendChild(swiperScript);

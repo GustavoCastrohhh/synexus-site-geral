@@ -280,9 +280,9 @@
     function submitLeadSilently(collectedData) {
         if (typeof window.submitLeadData === 'function') {
             let serviceName = "Abrir MEI (Chatbot)";
-            if (collectedData.situation === 'Já tenho MEI, mas preciso de ajuda') {
+            if (collectedData.situation && collectedData.situation.includes('preciso de ajuda')) {
                 serviceName = "Consultoria MEI (Chatbot)";
-            } else if (collectedData.situation === 'Quero migrar do MEI para empresa') {
+            } else if (collectedData.situation && collectedData.situation.includes('migrar do MEI')) {
                 serviceName = "Migração MEI (Chatbot)";
             }
 
