@@ -269,16 +269,18 @@
                 scrollBottom();
 
                 // Also fire the form submission silently for lead tracking
-                submitLeadSilently(name, phone);
+                submitLeadSilently(collectedData);
             }
         );
     }
 
-    function submitLeadSilently(name, phone) {
+    function submitLeadSilently(collectedData) {
         if (typeof window.submitLeadData === 'function') {
             const data = {
-                name: name,
-                phone: phone,
+                name: collectedData.name || '',
+                phone: collectedData.phone || '',
+                situation: collectedData.situation || '',
+                activity: collectedData.activity || '',
                 service: "Abrir MEI (Chatbot)",
                 formSource: "chatbot-silent"
             };
