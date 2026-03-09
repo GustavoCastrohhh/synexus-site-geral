@@ -45,31 +45,63 @@
     <link rel="canonical" href="https://synexus.com.br/abrir-mei/" />
     <meta name="keywords" content="abrir mei, contabilidade para mei, contador mei, abrir empresa, assessoria mei">
 
+    <!-- Preconnect: encurta cadeias críticas de rede -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://d2v5dzlf3dactd.cloudfront.net" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Preload da imagem LCP (acima da dobra) -->
+    <link rel="preload" as="image" href="https://d2v5dzlf3dactd.cloudfront.net/secretaria_virtual.jpg"
+        fetchpriority="high">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/animations.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/hero.css">
-    <link rel="stylesheet" href="../assets/css/clients.css">
-    <link rel="stylesheet" href="../assets/css/services.css">
-    <link rel="stylesheet" href="../assets/css/about.css">
-    <link rel="stylesheet" href="../assets/css/differentials.css">
-    <link rel="stylesheet" href="../assets/css/contact.css">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/popup.css">
-    <!-- <link rel="stylesheet" href="../assets/css/whatsapp.css"> -->
-    <!-- Novo CSS específico da landing page do MEI -->
-    <link rel="stylesheet" href="../assets/css/abrirmei.css">
-    <!-- Chatbot widget -->
-    <link rel="stylesheet" href="../assets/css/chatbot.css">
+    <!-- Swiper CSS (não-crítico: adiado) -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </noscript>
+
+    <!-- CSS Crítico (bloqueante) -->
+    <link rel="stylesheet" href="../assets/css/base.css?v=1.0.0">
+    <link rel="stylesheet" href="../assets/css/animations.css?v=1.0.0">
+    <link rel="stylesheet" href="../assets/css/header.css?v=1.0.0">
+    <link rel="stylesheet" href="../assets/css/hero.css?v=1.0.0">
+    <link rel="stylesheet" href="../assets/css/abrirmei.css?v=1.0.0">
+
+    <!-- CSS Não-Crítico (adiado) -->
+    <link rel="preload" href="../assets/css/clients.css?v=1.0.0" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/services.css?v=1.0.0" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/about.css?v=1.0.0" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/differentials.css?v=1.0.0" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/contact.css?v=1.0.0" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/footer.css?v=1.0.0" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/popup.css?v=1.0.0" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <!-- <link rel="preload" href="../assets/css/whatsapp.css?v=1.0.0" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <!-- Chatbot widget (não-crítico) -->
+    <link rel="preload" href="../assets/css/chatbot.css?v=1.0.0" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/clients.css?v=1.0.0">
+        <link rel="stylesheet" href="../assets/css/services.css?v=1.0.0">
+        <link rel="stylesheet" href="../assets/css/about.css?v=1.0.0">
+        <link rel="stylesheet" href="../assets/css/differentials.css?v=1.0.0">
+        <link rel="stylesheet" href="../assets/css/contact.css?v=1.0.0">
+        <link rel="stylesheet" href="../assets/css/footer.css?v=1.0.0">
+        <link rel="stylesheet" href="../assets/css/popup.css?v=1.0.0">
+        <link rel="stylesheet" href="../assets/css/chatbot.css?v=1.0.0">
+    </noscript>
 </head>
 
 <body>
@@ -82,7 +114,8 @@
     <header id="header">
         <div class="header-content">
             <a href="https://synexus.com.br" class="logo">
-                <img src="https://d2v5dzlf3dactd.cloudfront.net/synexus_logo.png" alt="Synexus Soluções Empresariais">
+                <img src="https://d2v5dzlf3dactd.cloudfront.net/synexus_logo.png" alt="Synexus Soluções Empresariais"
+                    width="160" height="40" loading="eager">
             </a>
 
             <nav class="nav-desktop">
@@ -146,7 +179,8 @@
                 <div class="chatbot-card">
                     <div class="cb-header">
                         <div class="cb-avatar"><img src="https://d2v5dzlf3dactd.cloudfront.net/secretaria_virtual.jpg"
-                                alt="Júlia - Assistente Synexus"></div>
+                                alt="Júlia - Assistente Synexus" width="48" height="48" fetchpriority="high"
+                                loading="eager"></div>
                         <div class="cb-header-info">
                             <strong>Assistente Synexus</strong>
                             <small>Especialista em abertura de MEI</small>
@@ -426,7 +460,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="https://d2v5dzlf3dactd.cloudfront.net/synexus_logo.png" alt="Synexus">
+                    <img src="https://d2v5dzlf3dactd.cloudfront.net/synexus_logo.png" alt="Synexus" width="130"
+                        height="34" loading="lazy">
                     <p>Transformando a contabilidade em segurança e proteção do MEI até as grandes corporações.</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/synexus.solucoes/" class="social-link" title="Instagram"
@@ -520,13 +555,13 @@
     -->
 
     <!-- ==================== SCRIPTS ==================== -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../assets/js/tracking.js"></script>
-    <script src="../assets/js/ui.js"></script>
-    <script src="../assets/js/form.js"></script>
-    <script src="../assets/js/clients.js"></script>
-    <script src="../assets/js/popup.js"></script>
-    <script src="../assets/js/chatbot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="../assets/js/tracking.js?v=1.0.0" defer></script>
+    <script src="../assets/js/ui.js?v=1.0.0" defer></script>
+    <script src="../assets/js/form.js?v=1.0.0" defer></script>
+    <script src="../assets/js/clients.js?v=1.0.0" defer></script>
+    <script src="../assets/js/popup.js?v=1.0.0" defer></script>
+    <script src="../assets/js/chatbot.js?v=1.0.0" defer></script>
 
 </body>
 
