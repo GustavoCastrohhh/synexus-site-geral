@@ -214,11 +214,13 @@
         if (inputLocked) return;
 
         // Dispara evento no GA4 ao iniciar a conversa (primeiro passo)
-        if (step.key === null && typeof window !== 'undefined' && window.dataLayer) {
+        if (step.key === null) {
+            window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 event: 'chatbot_start',
                 chat_initial_choice: choice
             });
+            console.log('Evento enviado para o dataLayer: chatbot_start', choice);
         }
 
         // First step greeting branch
