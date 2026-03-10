@@ -212,6 +212,15 @@
 
     function handleChoice(step, choice) {
         if (inputLocked) return;
+
+        // Dispara evento no GA4 ao iniciar a conversa (primeiro passo)
+        if (step.key === null && typeof window !== 'undefined' && window.dataLayer) {
+            window.dataLayer.push({
+                event: 'chatbot_start',
+                chat_initial_choice: choice
+            });
+        }
+
         // First step greeting branch
         if (step.key === null) {
             collectedData.start_choice = choice;
