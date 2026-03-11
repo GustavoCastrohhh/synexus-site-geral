@@ -3,104 +3,108 @@
    ============================================================ */
 
 .about {
-    padding: 6rem 0;
-    background: var(--white);
+  padding: 6rem 0;
+  background: var(--white);
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
 .about-text h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    color: var(--text-dark);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
 .about-text h2 .highlight {
-    background: linear-gradient(135deg, var(--primary-amber), var(--primary-amber-dark));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  background: linear-gradient(
+    135deg,
+    var(--primary-amber),
+    var(--primary-amber-dark)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .about-text p {
-    color: var(--text-gray);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
 .stats-box {
-    background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark-secondary));
-    border-radius: var(--radius-xl);
-    padding: 3rem;
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark-secondary));
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .stats-box::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(245, 158, 11, 0.1), transparent 60%);
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.1), transparent 60%);
+  pointer-events: none;
 }
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    position: relative;
-    z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .stat-item {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    padding: 1.5rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--glass-border);
-    text-align: center;
-    transition: var(--transition);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  transition: var(--transition);
 }
 
 .stat-item:hover {
-    transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #fbbf24, var(--primary-amber));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.25rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fbbf24, var(--primary-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.25rem;
 }
 
 .stat-label {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 @media (max-width: 1024px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .stats-box {
-        max-width: 500px;
-        margin: 0 auto;
-    }
+  .stats-box {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }

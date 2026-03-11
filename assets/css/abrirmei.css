@@ -3,105 +3,105 @@
 /* Custom styles for the MEI landing page */
 
 .alert-card {
-    border-left: 4px solid #e53e3e;
+  border-left: 4px solid #e53e3e;
 }
 
 .alert-card .service-icon-new {
-    background: rgba(229, 62, 62, 0.1);
+  background: rgba(229, 62, 62, 0.1);
 }
 
 .news-section {
-    padding: 5rem 0;
-    position: relative;
+  padding: 5rem 0;
+  position: relative;
 }
 
 .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .news-card {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .news-card.negative {
-    border-top: 4px solid #e53e3e;
+  border-top: 4px solid #e53e3e;
 }
 
 .news-card.positive {
-    border-top: 4px solid #38a169;
+  border-top: 4px solid #38a169;
 }
 
 .news-tag {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    width: max-content;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: max-content;
 }
 
 .news-tag.danger {
-    background: rgba(229, 62, 62, 0.1);
-    color: #c53030;
+  background: rgba(229, 62, 62, 0.1);
+  color: #c53030;
 }
 
 .news-tag.success {
-    background: rgba(56, 161, 105, 0.1);
-    color: #276749;
+  background: rgba(56, 161, 105, 0.1);
+  color: #276749;
 }
 
 .news-title {
-    font-size: 1.25rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    line-height: 1.4;
-    font-weight: 700;
-    font-style: italic;
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .news-excerpt {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .news-footer {
-    border-top: 1px solid #edf2f7;
-    padding-top: 1rem;
-    font-size: 0.85rem;
-    color: var(--text-light);
-    font-weight: 500;
-    font-style: italic;
+  border-top: 1px solid #edf2f7;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 500;
+  font-style: italic;
 }
 
 .mb-extra {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* Adjustments to contact section margin */
 .contact {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 /* ================================================================
@@ -109,249 +109,253 @@
    ================================================================ */
 
 .nws-section {
-    padding: 6rem 0 4rem;
-    background: #f4f4f4;
+  padding: 6rem 0 4rem;
+  background: #f4f4f4;
 }
 
 #riscos {
-    padding-top: 8rem;
+  padding-top: 8rem;
 }
 
 /* ── Header ──────────────────────────────────────────────── */
 .nws-header {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .nws-logo-bar {
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.6rem;
 }
 
 .nws-brand {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #cc0000;
-    text-transform: uppercase;
-    letter-spacing: -0.3px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #cc0000;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
 }
 
 .nws-divider {
-    color: #bbb;
+  color: #bbb;
 }
 
 .nws-category-tag {
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
-    color: #555;
-    background: #ddd;
-    padding: 0.18rem 0.55rem;
-    border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #555;
+  background: #ddd;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
 }
 
 .nws-section-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    line-height: 1.3;
-    border-bottom: 2px solid #cc0000;
-    padding-bottom: 0.55rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.3;
+  border-bottom: 2px solid #cc0000;
+  padding-bottom: 0.55rem;
 }
 
 /* ── Wrapper Dashboard ───────────────────────────────────── */
 .nws-wrapper {
-    /* background: #141414;
+  /* background: #141414;
     border-radius: 20px;
     padding: 2.5rem; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 @media (max-width: 900px) {
-    .nws-wrapper {
-        grid-template-columns: 1fr;
-    }
+  .nws-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Cards individuais ───────────────────────────────────── */
 .nws-card {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    background-color: #1f1f1f;
-    background-size: cover;
-    background-position: center center;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  background-size: cover;
+  background-position: center center;
 }
 
 .nws-card--featured {
-    background-position: center top;
+  background-position: center top;
 }
 
 /* Featured – taller */
 .nws-card--featured {
-    min-height: 420px;
+  min-height: 420px;
 }
 
 /* Small */
 .nws-card--sm {
-    min-height: 260px;
+  min-height: 260px;
 }
 
 /* ── Overlay (gradiente sobre imagem) ────────────────────── */
 .nws-card-bg-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .nws-card-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(to right,
-            rgba(10, 2, 2, 0.97) 0%,
-            rgba(10, 2, 2, 0.88) 50%,
-            rgba(10, 2, 2, 0.35) 75%,
-            rgba(10, 2, 2, 0.0) 100%);
-    padding: 1.25rem 1.4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 0.5rem;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(10, 2, 2, 0.97) 0%,
+    rgba(10, 2, 2, 0.88) 50%,
+    rgba(10, 2, 2, 0.35) 75%,
+    rgba(10, 2, 2, 0) 100%
+  );
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 /* Cards pequenos: label no topo, conteúdo no rodapé */
 .nws-card--sm .nws-card-overlay {
-    padding: 1rem 1.1rem;
+  padding: 1rem 1.1rem;
 }
 
 .nws-card-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 /* Variante verde para seção positiva */
 .nws-card-overlay--green {
-    background: linear-gradient(to right,
-            rgba(1, 20, 10, 0.97) 0%,
-            rgba(1, 20, 10, 0.88) 50%,
-            rgba(1, 20, 10, 0.35) 75%,
-            rgba(1, 20, 10, 0.0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(1, 20, 10, 0.97) 0%,
+    rgba(1, 20, 10, 0.88) 50%,
+    rgba(1, 20, 10, 0.35) 75%,
+    rgba(1, 20, 10, 0) 100%
+  );
 }
 
 /* ── Label / categoria ───────────────────────────────────── */
 .nws-label {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    color: #fff;
-    padding-bottom: 0.3rem;
-    border-bottom: 2px solid currentColor;
-    width: max-content;
-    margin-bottom: 0.1rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #fff;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid currentColor;
+  width: max-content;
+  margin-bottom: 0.1rem;
 }
 
 .nws-label--danger {
-    color: #ff4d4d;
+  color: #ff4d4d;
 }
 
 .nws-label--warning {
-    color: #f39c12;
+  color: #f39c12;
 }
 
 .nws-label--success {
-    color: #2ecc71;
+  color: #2ecc71;
 }
 
 /* ── Headlines ───────────────────────────────────────────── */
 .nws-headline-lg {
-    font-size: clamp(1.15rem, 2.2vw, 1.55rem);
-    font-weight: 800;
-    color: #fff;
-    line-height: 1.3;
-    margin: 0;
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0;
 }
 
 .nws-headline-sm {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.35;
-    margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin: 0;
 }
 
 /* ── Lead / excerpt ──────────────────────────────────────── */
 .nws-lead {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.72);
-    line-height: 1.6;
-    margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  margin: 0;
 }
 
 .nws-excerpt {
-    font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.65);
-    line-height: 1.5;
-    margin: 0;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* ── Meta ────────────────────────────────────────────────── */
 .nws-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
 }
 
 .nws-source {
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.5);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .nws-dot {
-    font-size: 0.45rem;
-    color: rgba(255, 255, 255, 0.3);
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .nws-date {
-    font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.4);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 768px) {
-    .nws-wrapper {
-        /* padding: 1.25rem; */
-        gap: 1rem;
-        /* border-radius: 12px; */
-    }
+  .nws-wrapper {
+    /* padding: 1.25rem; */
+    gap: 1rem;
+    /* border-radius: 12px; */
+  }
 
-    .nws-row {
-        gap: 1rem;
-    }
+  .nws-row {
+    gap: 1rem;
+  }
 
-    .nws-card--featured {
-        min-height: 340px;
-    }
+  .nws-card--featured {
+    min-height: 340px;
+  }
 
-    .nws-card--sm {
-        min-height: 220px;
-    }
+  .nws-card--sm {
+    min-height: 220px;
+  }
 
-    .nws-card-overlay {
-        padding: 1rem;
-    }
+  .nws-card-overlay {
+    padding: 1rem;
+  }
 }
 
 /* ================================================================
@@ -359,201 +363,201 @@
    ================================================================ */
 
 .portal-section {
-    padding: 4rem 0;
-    background: #f4f4f4;
-    border-top: 3px solid #cc0000;
+  padding: 4rem 0;
+  background: #f4f4f4;
+  border-top: 3px solid #cc0000;
 }
 
 /* ── Header bar ──────────────────────────────────────────── */
 .portal-header {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .portal-logo-bar {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
 .portal-brand {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #cc0000;
-    letter-spacing: -0.5px;
-    text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #cc0000;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
 }
 
 .portal-divider {
-    color: #aaa;
-    font-size: 1rem;
+  color: #aaa;
+  font-size: 1rem;
 }
 
 .portal-category-pill {
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    color: #555;
-    background: #e2e2e2;
-    padding: 0.2rem 0.6rem;
-    border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #555;
+  background: #e2e2e2;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
 }
 
 .portal-section-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    line-height: 1.3;
-    border-bottom: 2px solid #cc0000;
-    padding-bottom: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.3;
+  border-bottom: 2px solid #cc0000;
+  padding-bottom: 0.6rem;
 }
 
 /* ── Grid ────────────────────────────────────────────────── */
 .portal-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
 @media (max-width: 768px) {
-    .portal-grid {
-        grid-template-columns: 1fr;
-    }
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Featured article ────────────────────────────────────── */
 .portal-featured {
-    background: #fff;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .portal-thumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portal-thumb--featured {
-    height: 200px;
+  height: 200px;
 }
 
 .portal-thumb--sm {
-    width: 100px;
-    min-width: 100px;
-    height: 90px;
-    border-radius: 4px;
-    flex-shrink: 0;
+  width: 100px;
+  min-width: 100px;
+  height: 90px;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .portal-thumb-icon {
-    font-size: 2.5rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .portal-featured-body {
-    padding: 1.2rem 1.4rem 1.4rem;
+  padding: 1.2rem 1.4rem 1.4rem;
 }
 
 .portal-headline-featured {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    line-height: 1.35;
-    margin: 0.5rem 0 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.35;
+  margin: 0.5rem 0 0.75rem;
 }
 
 .portal-lead {
-    font-size: 0.88rem;
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 /* ── Secondary column ────────────────────────────────────── */
 .portal-secondary-col {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .portal-card {
-    background: #fff;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-    display: flex;
-    gap: 0;
-    transition: box-shadow 0.2s ease;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 0;
+  transition: box-shadow 0.2s ease;
 }
 
 .portal-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .portal-card-body {
-    padding: 0.85rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .portal-headline {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    line-height: 1.35;
-    margin: 0.35rem 0 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+  margin: 0.35rem 0 0.4rem;
 }
 
 .portal-excerpt {
-    font-size: 0.8rem;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
 /* ── Pills ───────────────────────────────────────────────── */
 .portal-pill {
-    display: inline-block;
-    font-size: 0.68rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.15rem 0.55rem;
-    border-radius: 2px;
-    width: max-content;
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.55rem;
+  border-radius: 2px;
+  width: max-content;
 }
 
 .portal-pill.danger {
-    background: #cc0000;
-    color: #fff;
+  background: #cc0000;
+  color: #fff;
 }
 
 .portal-pill.warning {
-    background: #e67e22;
-    color: #fff;
+  background: #e67e22;
+  color: #fff;
 }
 
 /* ── Meta (source + date) ────────────────────────────────── */
 .portal-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.75rem;
-    color: #999;
-    margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: auto;
 }
 
 .portal-source {
-    font-weight: 600;
-    color: #777;
+  font-weight: 600;
+  color: #777;
 }
 
 .portal-dot {
-    font-size: 0.5rem;
-    color: #bbb;
+  font-size: 0.5rem;
+  color: #bbb;
 }

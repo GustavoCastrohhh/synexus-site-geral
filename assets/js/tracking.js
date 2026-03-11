@@ -4,18 +4,27 @@
  * e os persiste no localStorage para uso posterior na submissão do formulário.
  */
 
-document.addEventListener('DOMContentLoaded', function () {
-    var urlParams = new URLSearchParams(window.location.search);
-    var trackingParams = [
-        'gclid', 'wbraid', 'gbraid', 'fbclid',
-        'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
-        'campaign', 'campaign_name', 'adgroup'
-    ];
+document.addEventListener("DOMContentLoaded", function () {
+  var urlParams = new URLSearchParams(window.location.search);
+  var trackingParams = [
+    "gclid",
+    "wbraid",
+    "gbraid",
+    "fbclid",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "campaign",
+    "campaign_name",
+    "adgroup",
+  ];
 
-    trackingParams.forEach(function (param) {
-        var val = urlParams.get(param);
-        if (val) {
-            localStorage.setItem(param, val);
-        }
-    });
+  trackingParams.forEach(function (param) {
+    var val = urlParams.get(param);
+    if (val) {
+      localStorage.setItem(param, val);
+    }
+  });
 });

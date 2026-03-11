@@ -1,0 +1,23 @@
+{
+  "name": "synexus-site-geral",
+  "version": "1.0.0",
+  "description": "Implementação do https://www.synexus.com.br",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}

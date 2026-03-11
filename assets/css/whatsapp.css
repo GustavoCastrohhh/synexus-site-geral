@@ -3,34 +3,34 @@
    ============================================================ */
 
 .whatsapp-float {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
-    text-decoration: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128c7e;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+  background-color: #128c7e;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 768px) {
-    .whatsapp-float {
-        bottom: 1.5rem;
-        right: 1.5rem;
-        width: 3rem;
-        height: 3rem;
-    }
+  .whatsapp-float {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
 }
