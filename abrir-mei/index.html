@@ -339,33 +339,51 @@
     </section>
 
     <!-- ==================== CLIENTS ==================== -->
-    <section class="nws-section" style="padding-top: 0;">
-        <div class="container animate-on-scroll">
-            <div class="clientes-section" id="clients" style="border-radius: 20px; padding: 4rem 0;">
-                <div class="clientes-header" style="margin-bottom: 2.5rem;">
-                    <h2>Nossos Clientes</h2>
-                    <p style="padding: 0 1rem;">Empresas que confiam na Synexus para crescer com segurança</p>
+    <section class="clientes-section" id="clients">
+        <div class="clientes-header">
+            <h2>Nossos Clientes</h2>
+            <p>Empresas que confiam na Synexus para crescer com segurança</p>
+        </div>
+
+        <div class="clientes-swiper-wrap">
+            <button class="clientes-nav-btn clientes-nav-prev" id="clientesPrev" aria-label="Anterior">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="clientes-nav-btn clientes-nav-next" id="clientesNext" aria-label="Próximo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+
+            <div class="swiper clientes-swiper">
+                <div class="swiper-wrapper" id="clientesSwiperWrapper">
+                    <!-- Slides injected by clients.js -->
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="clientes-swiper-wrap" style="padding: 0 1rem;">
-                    <button class="clientes-nav-btn clientes-nav-prev" id="clientesPrev" aria-label="Anterior">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                        </svg>
-                    </button>
-                    <button class="clientes-nav-btn clientes-nav-next" id="clientesNext" aria-label="Próximo">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </button>
-
-                    <div class="swiper clientes-swiper">
-                        <div class="swiper-wrapper" id="clientesSwiperWrapper">
-                            <!-- Slides injected by clients.js -->
-                        </div>
-                    </div>
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <h2>Sobre a <span class="highlight">Synexus</span></h2>
+                    <p>
+                        A Synexus Soluções Empresariais nasceu com o propósito de
+                        transformar a forma como empresas enxergam e utilizam a
+                        contabilidade. Acreditamos que a contabilidade vai muito além de
+                        números e obrigações fiscais.
+                    </p>
+                    <p>
+                        Somos parceiros estratégicos do seu negócio, oferecendo soluções
+                        inteligentes e personalizadas que impulsionam o crescimento
+                        sustentável da sua empresa.
+                    </p>
                 </div>
             </div>
         </div>
@@ -382,28 +400,36 @@
 
             <div class="diff-grid">
                 <div class="diff-card animate-on-scroll">
-                    <div class="diff-icon">🎯</div>
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"></path><path d="M12,6a6,6,0,1,0,6,6A6.006,6.006,0,0,0,12,6Zm0,10a4,4,0,1,1,4-4A4,4,0,0,1,12,16Z"></path><path d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z"></path></svg>
+                    </div>
                     <h3>Direto ao Ponto</h3>
                     <p>Analisamos a sua atividade (CNAE) para abrir no menor escopo de impostos para a sua realidade.
                         Você não escolhe errado no portal sozinho.</p>
                 </div>
 
                 <div class="diff-card animate-on-scroll">
-                    <div class="diff-icon">📱</div>
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,0A12.013,12.013,0,0,0,0,12v3a5.006,5.006,0,0,0,5,5H6a1,1,0,0,0,1-1V12a1,1,0,0,0-1-1H2.051A10,10,0,0,1,22,12H18a1,1,0,0,0-1,1v7a1,1,0,0,0,1,1h1a5.006,5.006,0,0,0,5-5V12A12.013,12.013,0,0,0,12,0ZM5,18H5a3,3,0,0,1-3-3V13H5Zm14,0V13h3v2A3,3,0,0,1,19,18Z"></path></svg>
+                    </div>
                     <h3>Suporte Contínuo</h3>
                     <p>Qualquer dúvida sobre emissão de notas ou pagamentos das guias DAS? Estamos há uma mensagem de
                         WhatsApp de distância todos os dias.</p>
                 </div>
 
                 <div class="diff-card animate-on-scroll">
-                    <div class="diff-icon">🛡️</div>
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"><path d="M12,23.949c-.077,0-.153-.018-.224-.053l-.425-.212c-2.194-1.098-9.354-5.191-9.354-11.8l.002-5.346c0-1.943,1.239-3.66,3.084-4.271L11.843,.025c.102-.034,.213-.034,.314,0l6.759,2.241c1.845,.612,3.084,2.329,3.084,4.271l-.003,5.346c0,7.498-7.172,10.967-9.37,11.852l-.441,.177c-.06,.024-.124,.036-.187,.036ZM12,1.027L5.398,3.216c-1.435,.476-2.398,1.811-2.398,3.322l-.002,5.346c0,6.035,6.736,9.874,8.801,10.906l.224,.112,.232-.093c2.051-.825,8.743-4.052,8.743-10.924l.003-5.346c0-1.511-.964-2.846-2.398-3.322L12,1.027Z"></path><path d="M10.981,15c-.641,0-1.282-.244-1.77-.732l-3.056-2.905c-.2-.19-.208-.507-.018-.707,.19-.199,.506-.208,.707-.018l3.065,2.914c.594,.593,1.545,.594,2.13,.009l5.612-5.42c.2-.191,.517-.185,.707,.013,.192,.198,.187,.515-.012,.707l-5.607,5.414c-.483,.483-1.121,.726-1.759,.726Z"></path></svg>
+                    </div>
                     <h3>Declaração Anual Feita</h3>
                     <p>Monitoramos o faturamento do seu negócio, evitamos que você seja desenquadrado por erro e
                         elaboramos sua declaração anual com segurança no prazo.</p>
                 </div>
 
                 <div class="diff-card animate-on-scroll">
-                    <div class="diff-icon">📈</div>
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23,21H5c-1.654,0-3-1.346-3-3V1A1,1,0,0,0,0,1V18c0,2.757,2.243,5,5,5H23a1,1,0,0,0,0-2Z"></path><path d="M6,18a1,1,0,0,0,1-1V12a1,1,0,0,0-2,0v5A1,1,0,0,0,6,18Z"></path><path d="M10,18a1,1,0,0,0,1-1V7a1,1,0,0,0-2,0V17A1,1,0,0,0,10,18Z"></path><path d="M14,18a1,1,0,0,0,1-1V10a1,1,0,0,0-2,0v7A1,1,0,0,0,14,18Z"></path><path d="M18,18a1,1,0,0,0,1-1V4a1,1,0,0,0-2,0V17A1,1,0,0,0,18,18Z"></path></svg>
+                    </div>
                     <h3>Preparados para o Futuro</h3>
                     <p>No dia em que sua empresa faturar mais e precisar virar uma ME, nós já estamos por dentro de
                         todos os seus números, tornando a migração fluida e indolor.</p>
@@ -414,38 +440,6 @@
 
     <!-- ==================== CONTACT CTA ==================== -->
     <section class="contact" id="contact" style="margin-bottom: 0;">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-form-wrapper animate-on-scroll">
-                    <h3>Abra seu CNPJ com segurança agora</h3>
-                    <p class="form-subtitle">Evite dores de cabeça futuras. Contrate nossa assessoria hoje mesmo.</p>
-                    <button class="btn btn-primary" onclick="scrollToSection('hero')" style="max-width: 300px;"
-                        data-click-text="Contato - MEI Cta Bottom">
-                        Falar com Especialista →
-                    </button>
-                </div>
-
-                <div class="contact-info-wrapper">
-                    <div class="info-card animate-on-scroll">
-                        <h3>Informações de Contato</h3>
-                        <div class="info-item">
-                            <div class="info-icon">📞</div>
-                            <div class="info-content">
-                                <h4>Telefone / WhatsApp</h4>
-                                <p>+55 (54) 9609-5981</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">✉️</div>
-                            <div class="info-content">
-                                <h4>E-mail</h4>
-                                <p>marcos.oliveira@synexus.com.br</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- ==================== FOOTER ==================== -->
@@ -525,7 +519,7 @@
                     <p>Registro no CRC/RS N° RS-010213/O-0 &nbsp;|&nbsp; CNPJ 51.416.221/0001-86</p>
                 </div>
                 <a href="https://wa.me/5554996673370" target="_blank" rel="noopener noreferrer">
-                    Desenvolvido por <strong style="color: #ef4444;">Gustavo Castro</strong>
+                    Desenvolvido por <strong style="color: #f59e0b;">Gustavo Castro</strong>
                 </a>
             </div>
         </div>
