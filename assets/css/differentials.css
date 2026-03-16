@@ -3,14 +3,12 @@
    ============================================================ */
 
 .differentials {
-  padding: 6rem 0;
-  background: linear-gradient(
-    135deg,
-    var(--bg-dark) 0%,
-    var(--bg-dark-secondary) 50%,
-    #422006 100%
-  );
+  padding: 6rem 1.5rem;
+  background: radial-gradient(ellipse at top right, #1a1a1a, #111111, #111111);
   position: relative;
+  border-radius: 2rem;
+  z-index: 1;
+  margin: 0 1rem 2rem;
 }
 
 .differentials .section-title,
@@ -55,9 +53,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   box-shadow: var(--shadow-amber);
+}
+
+.diff-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: var(--white);
+  flex-shrink: 0;
 }
 
 .diff-card h3 {

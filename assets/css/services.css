@@ -4,6 +4,7 @@
 
 .services {
   padding: 6rem 0;
+  margin-top: 3rem;
   background: var(--bg-light);
 }
 
@@ -51,9 +52,6 @@
   background: var(--white);
   padding: 2.5rem 2rem;
   border-radius: 1rem;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.05),
-    0 2px 4px -1px rgba(0, 0, 0, 0.03);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -67,9 +65,6 @@
 
 .service-card-new:hover {
   transform: translateY(-5px);
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .service-icon-new {
@@ -85,10 +80,15 @@
   align-items: center;
   justify-content: center;
   color: var(--white);
-  font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  font-weight: 800;
   box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+}
+
+.service-icon-new svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: var(--white);
+  flex-shrink: 0;
 }
 
 .service-card-new h3 {
